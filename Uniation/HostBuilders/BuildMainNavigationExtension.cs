@@ -19,6 +19,7 @@ namespace Uniation.HostBuilders
                 services.AddNavigationService<MainPageViewModel, NavigationStore>();
                 services.AddNavigationService<ProjectsPageViewModel, NavigationStore>();
                 services.AddNavigationService<ProjectCardViewModel, NavigationStore>();
+                services.AddNavigationService<DonationPageViewModel, NavigationStore>();
 
 
             });

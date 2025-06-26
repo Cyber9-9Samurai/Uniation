@@ -1,11 +1,13 @@
-﻿E:\MVS projects\Uniation\Uniation\obj\Debug\net8.0-windows\GeneratedInternalTypeHelper.g.cs
+﻿
 
 FE:\MVS projects\Uniation\Uniation\Resources\CommonConverters.xaml;;
 FE:\MVS projects\Uniation\Uniation\Resources\DataTemplates\PagesDataTemplates.xaml;;
 FE:\MVS projects\Uniation\Uniation\Resources\DataTemplates\PopupDataTemplates.xaml;;
+FE:\MVS projects\Uniation\Uniation\Views\Pages\DonationView.xaml;;
 FE:\MVS projects\Uniation\Uniation\Views\Pages\MainView.xaml;;
 FE:\MVS projects\Uniation\Uniation\Views\Pages\ProjectCardView.xaml;;
 FE:\MVS projects\Uniation\Uniation\Views\Pages\ProjectsView.xaml;;
 FE:\MVS projects\Uniation\Uniation\Views\Popups\PasswordPopupView.xaml;;
 FE:\MVS projects\Uniation\Uniation\Views\Windows\MainWindow.xaml;;
+FE:\MVS projects\Uniation\Uniation\Views\Popups\PaymentsMethodsView.xaml;;
 

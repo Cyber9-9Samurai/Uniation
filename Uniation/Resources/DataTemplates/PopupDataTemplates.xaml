@@ -5,4 +5,8 @@
     <DataTemplate DataType="{x:Type popups:PasswordPopupViewModel}">
         <popups1:PasswordPopupView DataContext="{Binding}"/>
     </DataTemplate>
+
+    <DataTemplate DataType="{x:Type popups:PaymentsMethodsViewModel}">
+        <popups1:PaymentsMethodsView DataContext="{Binding}"/>
+    </DataTemplate>
 </ResourceDictionary>

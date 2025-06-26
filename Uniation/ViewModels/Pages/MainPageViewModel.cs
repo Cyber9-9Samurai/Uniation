@@ -8,15 +8,23 @@ namespace Uniation.ViewModels.Pages;
 public partial class MainPageViewModel:ObservableObject
 {
     private readonly NavigationService<ProjectsPageViewModel> _projNavService;
+    private readonly NavigationService<DonationPageViewModel> _donationNav;
 
-    public MainPageViewModel(NavigationService<ProjectsPageViewModel> navigation)
+    public MainPageViewModel(NavigationService<ProjectsPageViewModel> navigation, NavigationService<DonationPageViewModel> donationNav)
     {
         _projNavService = navigation;
+        _donationNav = donationNav;
     }
 
     [RelayCommand]
     private void ToProjects()
     {
         _projNavService.Navigate();
+    }
+
+    [RelayCommand]
+    private void ToDonatioons()
+    {
+        _donationNav.Navigate();
     }
 }

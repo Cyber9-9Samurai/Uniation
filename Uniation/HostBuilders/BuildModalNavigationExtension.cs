@@ -20,7 +20,10 @@ namespace Uniation.HostBuilders
                 services.AddNavigationService<PasswordPopupViewModel, ModalNavigationStore>(s => new PasswordPopupViewModel(
                     s.GetRequiredService<CloseNavigationService<ModalNavigationStore>>(),
                     context.Configuration.GetValue<string>("exitPassword") ?? "1234"));
+                services.AddNavigationService<PaymentsMethodsViewModel, ModalNavigationStore>();
             });
+
+                
 
             return builder;
         }

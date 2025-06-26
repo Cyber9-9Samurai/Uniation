@@ -8,6 +8,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using MvvmNavigationLib.Services;
 using MvvmNavigationLib.Stores;
+using Uniation.ViewModels.Popups;
 
 namespace Uniation.HostBuilders
 {
@@ -25,10 +26,12 @@ namespace Uniation.HostBuilders
                     s.GetRequiredService<NavigationStore>(),
                     s.GetRequiredService<NavigationService<MainPageViewModel>>(),
                     s.GetRequiredService<CloseNavigationService<ModalNavigationStore>>()));
+                services.AddTransient<PaymentsMethodsViewModel>();
 
                 services.AddSingleton<MainWindowViewModel>();
                 services.AddSingleton<ProjectsPageViewModel>();
                 services.AddTransient<ProjectCardViewModel>();
+                services.AddSingleton<DonationPageViewModel>();
                
                 services.AddSingleton(s => new Views.Windows.MainWindow()
                 {
