@@ -1,0 +1,20 @@
+﻿Uniation
+
+
+winexe
+C#
+.cs
+E:\MVS projects\Uniation\Uniation\obj\Debug\net8.0-windows\
+Uniation
+none
+false
+TRACE;DEBUG;NET;NET8_0;NETCOREAPP
+E:\MVS projects\Uniation\Uniation\App.xaml
+111757660939
+
+341796713106
+240486899876
+Resources\CommonBrushes.xaml;Resources\CommonConverters.xaml;Resources\DataTemplates\PagesDataTemplates.xaml;Resources\DataTemplates\PopupDataTemplates.xaml;Resources\Styles\ButtonStyles.xaml;Resources\Styles\TextStyles.xaml;Views\Pages\MainView.xaml;Views\Pages\ProjectCardView.xaml;Views\Pages\ProjectsView.xaml;Views\Popups\PasswordPopupView.xaml;Views\Windows\MainWindow.xaml;
+
+False
+

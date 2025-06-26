@@ -27,10 +27,14 @@ namespace Uniation.HostBuilders
                     s.GetRequiredService<CloseNavigationService<ModalNavigationStore>>()));
 
                 services.AddSingleton<MainWindowViewModel>();
+                services.AddSingleton<ProjectsPageViewModel>();
+                services.AddTransient<ProjectCardViewModel>();
+               
                 services.AddSingleton(s => new Views.Windows.MainWindow()
                 {
                     DataContext = s.GetRequiredService<MainWindowViewModel>()
                 });
+                
             });
             return builder;
         }

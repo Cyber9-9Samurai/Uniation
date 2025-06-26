@@ -1,0 +1,13 @@
+2025-06-25 20:22:05.485 +04:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-06-25 20:22:05.509 +04:00 [INF] Hosting environment: Production
+2025-06-25 20:22:05.509 +04:00 [INF] Content root path: E:\MVS projects\Uniation\Uniation\bin\Debug\net8.0-windows
+2025-06-25 22:20:57.042 +04:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-06-25 22:20:57.078 +04:00 [INF] Hosting environment: Production
+2025-06-25 22:20:57.079 +04:00 [INF] Content root path: E:\MVS projects\Uniation\Uniation\bin\Debug\net8.0-windows
+2025-06-25 22:58:26.825 +04:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-06-25 22:58:26.848 +04:00 [INF] Hosting environment: Production
+2025-06-25 22:58:26.849 +04:00 [INF] Content root path: E:\MVS projects\Uniation\Uniation\bin\Debug\net8.0-windows
+2025-06-25 22:58:39.758 +04:00 [INF] Application is shutting down...
+2025-06-25 23:03:08.444 +04:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-06-25 23:03:08.467 +04:00 [INF] Hosting environment: Production
+2025-06-25 23:03:08.468 +04:00 [INF] Content root path: E:\MVS projects\Uniation\Uniation\bin\Debug\net8.0-windows

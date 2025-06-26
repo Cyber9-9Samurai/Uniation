@@ -7,8 +7,16 @@
              xmlns:components="clr-namespace:MainComponents.Components;assembly=MainComponents"
              xmlns:pages="clr-namespace:Uniation.ViewModels.Pages"
              mc:Ignorable="d"
-             d:DesignHeight="450" d:DesignWidth="800"
+             d:DesignHeight="1080" d:DesignWidth="1920"
              d:DataContext="{d:DesignInstance pages:MainPageViewModel}"
              x:Name="MainPage">
-
+    <Grid>
+        <StackPanel>
+            <WrapPanel>
+                <Button Style="{StaticResource BlueMainMenuButton}" Command="{Binding ToProjectsCommand}" >Наши проекты</Button>
+                <Button Style="{StaticResource BlueMainMenuButton}">Об организации</Button>
+            </WrapPanel>
+            <Button Style="{StaticResource RedMainMenuButton}">Пожертвовать</Button>
+        </StackPanel>
+    </Grid>
 </UserControl>

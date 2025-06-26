@@ -4,6 +4,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using MvvmNavigationLib.Services.ServiceCollectionExtensions;
 using MvvmNavigationLib.Stores;
+using Uniation.Helpers;
 
 namespace Uniation.HostBuilders
 {
@@ -15,7 +16,10 @@ namespace Uniation.HostBuilders
             {
                 services.AddSingleton<NavigationStore>();
                 services.AddUtilityNavigationServices<NavigationStore>();
-                services.AddNavigationService<MainPageViewModel,NavigationStore>();
+                services.AddNavigationService<MainPageViewModel, NavigationStore>();
+                services.AddNavigationService<ProjectsPageViewModel, NavigationStore>();
+                services.AddNavigationService<ProjectCardViewModel, NavigationStore>();
+
 
             });
 

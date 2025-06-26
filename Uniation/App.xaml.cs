@@ -33,10 +33,12 @@ public partial class App : Application
         return Host.CreateDefaultBuilder(args)
             .BuildConfiguration()
             .BuildLogging()
+            .BuildApi()
             .BuildMainNavigation()
             .BuildModalNavigation()
-            .BuildApi()
-            .BuildViews();
+            .BuildViews()
+            .BuildNavigationHelper();
+            
     }
 
     protected override async void OnStartup(StartupEventArgs e)
@@ -44,10 +46,12 @@ public partial class App : Application
         var initialNavigationService = 
             _appHost.Services.GetRequiredService<NavigationService<MainPageViewModel>>();
 
+        var preload = _appHost.Services.GetRequiredService<ApiService>();
         initialNavigationService.Navigate();
         MainWindow = _appHost.Services.GetRequiredService<Views.Windows.MainWindow>();
         MainWindow.Show();
         await _appHost.StartAsync();
+        preload.GetAllProjects();
         base.OnStartup(e);
     }
 
