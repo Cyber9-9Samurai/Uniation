@@ -26,7 +26,7 @@
                     <StackPanel>
                         <b:Interaction.Triggers>
                             <b:EventTrigger EventName="Checked">
-                                <b:InvokeCommandAction Command="{Binding UserChooseCommand}"/>
+                                <b:InvokeCommandAction Command="{Binding UserChooseCommand}" CommandParameter="100P"/>
                             </b:EventTrigger>
                         </b:Interaction.Triggers>
                         <TextBlock Text="100P"/>
@@ -35,7 +35,7 @@
                 <RadioButton GroupName="Sum" IsChecked="{Binding IsFiveHundredChecked}">
                     <b:Interaction.Triggers>
                         <b:EventTrigger EventName="Checked">
-                            <b:InvokeCommandAction Command="{Binding UserChooseCommand}"/>
+                            <b:InvokeCommandAction Command="{Binding UserChooseCommand}" CommandParameter="500P"/>
                         </b:EventTrigger>
                     </b:Interaction.Triggers>
                     <TextBlock Text="500P"/>
@@ -43,7 +43,7 @@
                 <RadioButton GroupName="Sum"  IsChecked="{Binding IsOneThousendChecked}">
                     <b:Interaction.Triggers>
                         <b:EventTrigger EventName="Checked">
-                            <b:InvokeCommandAction Command="{Binding UserChooseCommand}"/>
+                            <b:InvokeCommandAction Command="{Binding UserChooseCommand}" CommandParameter="1000P"/>
                         </b:EventTrigger>
                     </b:Interaction.Triggers>
                     <TextBlock Text="1000P"/>
@@ -51,7 +51,7 @@
                 <RadioButton GroupName="Sum"  IsChecked="{Binding IsFiveThousandsChecked}">
                     <b:Interaction.Triggers>
                         <b:EventTrigger EventName="Checked">
-                            <b:InvokeCommandAction Command="{Binding UserChooseCommand}"/>
+                            <b:InvokeCommandAction Command="{Binding UserChooseCommand}" CommandParameter="5000P"/>
                         </b:EventTrigger>
                     </b:Interaction.Triggers>
                     <TextBlock Text="5000P"/>

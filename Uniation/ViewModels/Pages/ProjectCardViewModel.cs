@@ -27,10 +27,12 @@ namespace Uniation.ViewModels.Pages
 
         private readonly ApiService _apiService;
         private readonly NavigationService<ProjectsPageViewModel> _projNavigation;
-       
+        private readonly NavigationService<DonationPageViewModel> _donatNav;
 
-        
-        public ProjectCardViewModel(NavigationHelper helper, ApiService apiService,NavigationService<ProjectsPageViewModel> projNavigation)
+
+
+
+        public ProjectCardViewModel(NavigationHelper helper, ApiService apiService,NavigationService<ProjectsPageViewModel> projNavigation,NavigationService<DonationPageViewModel> donatNav)
         {
             if (helper.Parameter is int id)
             {
@@ -39,6 +41,7 @@ namespace Uniation.ViewModels.Pages
 
             _apiService = apiService;
             _projNavigation = projNavigation;
+            _donatNav = donatNav;
             LoadData();
         }
 
@@ -55,6 +58,12 @@ namespace Uniation.ViewModels.Pages
         private void Return()
         {
             _projNavigation.Navigate();
+        }
+
+        [RelayCommand]
+        private void ToDonation()
+        {
+            _donatNav.Navigate();
         }
     }
 }

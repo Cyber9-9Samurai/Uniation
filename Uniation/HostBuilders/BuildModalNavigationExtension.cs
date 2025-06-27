@@ -5,6 +5,8 @@ using Microsoft.Extensions.Hosting;
 using MvvmNavigationLib.Services;
 using MvvmNavigationLib.Services.ServiceCollectionExtensions;
 using MvvmNavigationLib.Stores;
+using Uniation.Helpers;
+using Uniation.ViewModels.Pages;
 
 namespace Uniation.HostBuilders
 {
@@ -21,7 +23,12 @@ namespace Uniation.HostBuilders
                     s.GetRequiredService<CloseNavigationService<ModalNavigationStore>>(),
                     context.Configuration.GetValue<string>("exitPassword") ?? "1234"));
                 services.AddNavigationService<PaymentsMethodsViewModel, ModalNavigationStore>();
+                services.AddNavigationService<CardMethodPopupViewModel, ModalNavigationStore>();
+                services.AddNavigationService<QRMethodPopupViewModel, ModalNavigationStore>();
+                services.AddNavigationService<WaitingPopupViewModal, ModalNavigationStore>();
+                services.AddNavigationService<SuccsessfulDonationViewModel, ModalNavigationStore>();
             });
+                
 
                 
 

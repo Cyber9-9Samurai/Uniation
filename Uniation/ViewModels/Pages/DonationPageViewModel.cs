@@ -33,15 +33,18 @@ namespace Uniation.ViewModels.Pages
 
         private readonly NavigationService<MainPageViewModel> _mainNav;
         private readonly NavigationService<PaymentsMethodsViewModel> _popup;
+        private readonly NavigationHelper _navigationHelper;
         private ProjectsData zeroProj = new();
+        private string choosenRadioBtn;
 
        
-        public DonationPageViewModel(NavigationService<MainPageViewModel> mainNav,ApiService apiService,NavigationService<PaymentsMethodsViewModel> popup)
+        public DonationPageViewModel(NavigationService<MainPageViewModel> mainNav,ApiService apiService,NavigationService<PaymentsMethodsViewModel> popup,NavigationHelper navigationHelper)
         {
             _mainNav = mainNav;
             SetDefaultSettings();
             Projects = apiService.projects;
             _popup = popup;
+            _navigationHelper = navigationHelper;
             Projects.Insert(0,zeroProj);
         }
 
@@ -68,14 +71,23 @@ namespace Uniation.ViewModels.Pages
             SelectedIndex = 0;
             IsOneHundredChecked = true;
             Sum = "";
+            choosenRadioBtn = "100P";
         }
 
         [RelayCommand]
         private void Donate()
         {
-            if (SelectedIndex !=0 && (isChoose() || Sum.Length > 0))
+            if (SelectedIndex !=0 && (isChoose() || (Sum.Length > 0 && int.TryParse(Sum,out int a) && a > 10)))
             {
-                _popup.Navigate();
+                if (isChoose())
+                {
+                    _navigationHelper.Parameter = choosenRadioBtn;
+                }
+                else
+                {
+                    _navigationHelper.Parameter = Sum;
+                }
+                    _popup.Navigate();
             }
         }
 
@@ -107,10 +119,11 @@ namespace Uniation.ViewModels.Pages
         }
 
         [RelayCommand]
-        private void UserChoose()
+        private void UserChoose(string cont)
         {
             Sum = "";
             PlaceholderVis = Visibility.Visible;
+            choosenRadioBtn = cont;
         }
 
         [RelayCommand]

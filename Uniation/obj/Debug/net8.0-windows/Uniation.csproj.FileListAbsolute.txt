@@ -86,3 +86,11 @@ E:\MVS projects\Uniation\Uniation\obj\Debug\net8.0-windows\Views\Pages\DonationV
 E:\MVS projects\Uniation\Uniation\obj\Debug\net8.0-windows\Views\Pages\DonationView.baml
 E:\MVS projects\Uniation\Uniation\obj\Debug\net8.0-windows\Views\Popups\PaymentsMethodsView.g.cs
 E:\MVS projects\Uniation\Uniation\obj\Debug\net8.0-windows\Views\Popups\PaymentsMethodsView.baml
+E:\MVS projects\Uniation\Uniation\obj\Debug\net8.0-windows\Views\Popups\CardMethodPopupView.g.cs
+E:\MVS projects\Uniation\Uniation\obj\Debug\net8.0-windows\Views\Popups\CardMethodPopupView.baml
+E:\MVS projects\Uniation\Uniation\obj\Debug\net8.0-windows\Views\Popups\QRMethodPopupView.g.cs
+E:\MVS projects\Uniation\Uniation\obj\Debug\net8.0-windows\Views\Popups\QRMethodPopupView.baml
+E:\MVS projects\Uniation\Uniation\obj\Debug\net8.0-windows\Views\Popups\WaitingPopupView.g.cs
+E:\MVS projects\Uniation\Uniation\obj\Debug\net8.0-windows\Views\Popups\WaitingPopupView.baml
+E:\MVS projects\Uniation\Uniation\obj\Debug\net8.0-windows\Views\Popups\SuccsessfulDonationView.g.cs
+E:\MVS projects\Uniation\Uniation\obj\Debug\net8.0-windows\Views\Popups\SuccsessfulDonationView.baml

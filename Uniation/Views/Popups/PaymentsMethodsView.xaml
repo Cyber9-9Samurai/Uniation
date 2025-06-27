@@ -4,9 +4,19 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:Uniation.Views.Popups"
+             xmlns:pages="clr-namespace:Uniation.ViewModels.Popups"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
+             d:DesignHeight="450" d:DesignWidth="800"
+             d:DataContext="{d:DesignInstance pages:PaymentsMethodsViewModel}">
     <Grid>
-            
+        <StackPanel Width="300" Height="300" Background="White">
+            <Image/>
+            <TextBlock Text="Выберите способ пожертвования"/>
+            <TextBlock Text="{Binding Sum}"/>
+            <Button Content="Картой" Command="{Binding ChooseCommand}" CommandParameter="card"/>
+            <Button Content="По QR-коду" Command="{Binding ChooseCommand}" CommandParameter="QR"/>
+            <Button Content="Отмена" Command="{Binding CancelCommand}"/>
+        </StackPanel>
+        
     </Grid>
 </UserControl>

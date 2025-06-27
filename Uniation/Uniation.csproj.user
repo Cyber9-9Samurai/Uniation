@@ -11,7 +11,19 @@
     <Compile Update="Views\Pages\ProjectsView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Views\Popups\SuccsessfulDonationView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Popups\WaitingPopupView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Popups\CardMethodPopupView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Views\Popups\PaymentsMethodsView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Popups\QRMethodPopupView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>

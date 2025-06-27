@@ -7,7 +7,11 @@ FE:\MVS projects\Uniation\Uniation\Views\Pages\DonationView.xaml;;
 FE:\MVS projects\Uniation\Uniation\Views\Pages\MainView.xaml;;
 FE:\MVS projects\Uniation\Uniation\Views\Pages\ProjectCardView.xaml;;
 FE:\MVS projects\Uniation\Uniation\Views\Pages\ProjectsView.xaml;;
+FE:\MVS projects\Uniation\Uniation\Views\Popups\CardMethodPopupView.xaml;;
 FE:\MVS projects\Uniation\Uniation\Views\Popups\PasswordPopupView.xaml;;
-FE:\MVS projects\Uniation\Uniation\Views\Windows\MainWindow.xaml;;
 FE:\MVS projects\Uniation\Uniation\Views\Popups\PaymentsMethodsView.xaml;;
+FE:\MVS projects\Uniation\Uniation\Views\Popups\QRMethodPopupView.xaml;;
+FE:\MVS projects\Uniation\Uniation\Views\Popups\WaitingPopupView.xaml;;
+FE:\MVS projects\Uniation\Uniation\Views\Windows\MainWindow.xaml;;
+FE:\MVS projects\Uniation\Uniation\Views\Popups\SuccsessfulDonationView.xaml;;
 
