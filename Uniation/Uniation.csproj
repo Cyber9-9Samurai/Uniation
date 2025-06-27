@@ -10,6 +10,11 @@
 
   <ItemGroup>
     <None Remove="Resources\Images\ei_spinner.png" />
+    <None Remove="Resources\Images\FirstSlide.png" />
+    <None Remove="Resources\Images\FivesSlide.png" />
+    <None Remove="Resources\Images\FourthSlide.png" />
+    <None Remove="Resources\Images\SecondSlide.png" />
+    <None Remove="Resources\Images\ThirdSlide.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -47,6 +52,11 @@
 
   <ItemGroup>
     <Resource Include="Resources\Images\ei_spinner.png" />
+    <Resource Include="Resources\Images\FirstSlide.png" />
+    <Resource Include="Resources\Images\FivesSlide.png" />
+    <Resource Include="Resources\Images\FourthSlide.png" />
+    <Resource Include="Resources\Images\SecondSlide.png" />
+    <Resource Include="Resources\Images\ThirdSlide.png" />
   </ItemGroup>
 
 </Project>

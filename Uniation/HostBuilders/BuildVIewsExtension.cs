@@ -36,6 +36,7 @@ namespace Uniation.HostBuilders
                 services.AddSingleton<ProjectsPageViewModel>();
                 services.AddTransient<ProjectCardViewModel>();
                 services.AddTransient<DonationPageViewModel>();
+                services.AddSingleton<AboutPageViewModel>();
                
                 services.AddSingleton(s => new Views.Windows.MainWindow()
                 {

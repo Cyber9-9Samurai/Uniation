@@ -79,15 +79,19 @@ namespace Uniation.ViewModels.Pages
         {
             if (SelectedIndex !=0 && (isChoose() || (Sum.Length > 0 && int.TryParse(Sum,out int a) && a > 10)))
             {
+                DonatedProject proj = new();
+                proj.id = SelectedIndex;
+                proj.title = Projects.FirstOrDefault(i => i.id == SelectedIndex).title;
                 if (isChoose())
                 {
-                    _navigationHelper.Parameter = choosenRadioBtn;
+                    proj.sum = int.Parse(choosenRadioBtn.Remove(choosenRadioBtn.Length - 1,1));
                 }
                 else
                 {
-                    _navigationHelper.Parameter = Sum;
+                    proj.sum = int.Parse(Sum);
                 }
-                    _popup.Navigate();
+                _navigationHelper.Parameter = proj;
+                _popup.Navigate();
             }
         }
 

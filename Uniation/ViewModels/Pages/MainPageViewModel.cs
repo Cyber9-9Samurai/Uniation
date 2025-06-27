@@ -9,11 +9,14 @@ public partial class MainPageViewModel:ObservableObject
 {
     private readonly NavigationService<ProjectsPageViewModel> _projNavService;
     private readonly NavigationService<DonationPageViewModel> _donationNav;
+    private readonly NavigationService<AboutPageViewModel> _abouNav;
 
-    public MainPageViewModel(NavigationService<ProjectsPageViewModel> navigation, NavigationService<DonationPageViewModel> donationNav)
+
+    public MainPageViewModel(NavigationService<ProjectsPageViewModel> navigation, NavigationService<DonationPageViewModel> donationNav,NavigationService<AboutPageViewModel> abouNav)
     {
         _projNavService = navigation;
         _donationNav = donationNav;
+        _abouNav = abouNav;
     }
 
     [RelayCommand]
@@ -26,5 +29,11 @@ public partial class MainPageViewModel:ObservableObject
     private void ToDonatioons()
     {
         _donationNav.Navigate();
+    }
+
+    [RelayCommand]
+    private void ToAbout()
+    {
+        _abouNav.Navigate();
     }
 }

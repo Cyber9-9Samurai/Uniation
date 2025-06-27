@@ -17,4 +17,8 @@
     <DataTemplate DataType="{x:Type pages:DonationPageViewModel}">
         <pages1:DonationView DataContext="{Binding}"/>
     </DataTemplate>
+
+    <DataTemplate DataType="{x:Type pages:AboutPageViewModel}">
+        <pages1:AboutPageView DataContext="{Binding}"/>
+    </DataTemplate>
 </ResourceDictionary>

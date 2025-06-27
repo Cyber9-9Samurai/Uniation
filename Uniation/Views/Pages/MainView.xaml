@@ -14,7 +14,7 @@
         <StackPanel>
             <WrapPanel>
                 <Button Style="{StaticResource BlueMainMenuButton}" Command="{Binding ToProjectsCommand}" >Наши проекты</Button>
-                <Button Style="{StaticResource BlueMainMenuButton}">Об организации</Button>
+                <Button Style="{StaticResource BlueMainMenuButton}" Command="{Binding ToAboutCommand}">Об организации</Button>
             </WrapPanel>
             <Button Style="{StaticResource RedMainMenuButton}" Command="{Binding ToDonatioonsCommand}">Пожертвовать</Button>
         </StackPanel>

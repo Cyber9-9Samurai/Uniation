@@ -12,6 +12,7 @@ using Uniation.Helpers;
 using Uniation.ViewModels.Pages;
 using Uniation.HostBuilders;
 using System.Timers;
+using Uniation.Models;
 
 namespace Uniation.ViewModels.Popups
 {
@@ -31,9 +32,9 @@ namespace Uniation.ViewModels.Popups
             _modalNavigationStore = modalNavigationStore;
             _mainNav = mainNav;
             _waitNav = waitNav;
-            if (navigationHelper.Parameter is string s)
+            if (navigationHelper.Parameter is DonatedProject p)
             {
-                Sum = "К оплате: " + s;
+                Sum = "К оплате: " + p.sum + "P";
             }
             _timer = new System.Threading.Timer(TimerCallback, waitNav, 5000, Timeout.Infinite);
            
