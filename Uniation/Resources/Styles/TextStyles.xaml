@@ -6,6 +6,7 @@
     <FontFamily x:Key="din-meduim">pack://application,,,/Resources/Fonts/dinpro_medium.otf</FontFamily>
     <FontFamily x:Key="din-light">pack://application,,,/Resources/Fonts/dinpro_light.otf</FontFamily>
     <FontFamily x:Key="din-bold">pack://application,,,/Resources/Fonts/dinpro_bold.otf</FontFamily>
+    <FontFamily x:Key="open-sans">pack://application,,,/Resources/Fonts/OpenSans.ttf</FontFamily>
     <Style TargetType="TextBlock" x:Key="BaseTextStyle">
         <Setter Property="Foreground" Value="{StaticResource TextBrush}"/>
         <Setter Property="TextWrapping" Value="Wrap"/>
@@ -94,5 +95,59 @@
         <Setter Property="TextBlock.Width" Value="773"/>
         <Setter Property="TextBlock.TextAlignment" Value="Left"/>
         <Setter Property="TextBlock.Margin" Value="0,0,0,0"/>
+    </Style>
+
+    <Style x:Key="DonationProjectChoose" BasedOn="{StaticResource GreatingHeader}">
+        <Setter Property="TextBlock.Height" Value="59"/>
+        <Setter Property="TextBlock.Width" Value="803"/>
+        <Setter Property="TextBlock.TextAlignment" Value="Left"/>
+        <Setter Property="Canvas.Top" Value="80"/>
+        <Setter Property="Canvas.Left" Value="50"/>
+    </Style>
+
+    <Style x:Key="ChooseSum" BasedOn="{StaticResource DonationProjectChoose}">
+        <Setter Property="TextBlock.Height" Value="65"/>
+       <Setter Property="Canvas.Top" Value="342"/>
+        <Setter Property="Canvas.Left" Value="50"/>
+    </Style>
+
+    <Style x:Key="PlaceholderText" BasedOn="{StaticResource ProjInfoDesc}">
+        <Setter Property="TextBlock.Height" Value="43"/>
+        <Setter Property="TextBlock.Width" Value="200"/>
+        <Setter Property="TextBlock.FontSize" Value="35"/>
+        <Setter Property="Canvas.Top" Value="566"/>
+        <Setter Property="Canvas.Left" Value="82"/>
+        <Setter Property="TextBlock.Foreground" Value="#707070"/>
+    </Style>
+
+    <Style x:Key="WarningText" BasedOn="{StaticResource ProjInfoDesc}">
+        <Setter Property="TextBlock.Height" Value="31"/>
+        <Setter Property="TextBlock.Width" Value="803"/>
+        <Setter Property="TextBlock.FontSize" Value="25"/>
+        <Setter Property="Canvas.Top" Value="665"/>
+        <Setter Property="Canvas.Left" Value="50"/>
+    </Style>
+
+    <Style x:Key="SumDisplay">
+        <Setter Property="TextBox.Height" Value="107"/>
+        <Setter Property="TextBox.Width" Value="803"/>
+        <Setter Property="TextBox.FontFamily" Value="{StaticResource din-regular}"/>
+        <Setter Property="TextBox.FontSize" Value="25"/>
+        <Setter Property="Canvas.Top" Value="534"/>
+        <Setter Property="Canvas.Left" Value="50"/>
+        <Setter Property="TextBox.Foreground" Value="#1E1E1E"/>
+        <Setter Property="TextBox.Padding" Value="32,32,32,32"/>
+        <Setter Property="TextBox.BorderThickness" Value="1"/>
+        <Setter Property="TextBox.BorderBrush" Value="#707070"/>
+        <Setter Property="TextBox.IsReadOnly" Value="True"/>
+        <Setter Property="TextBox.Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="TextBox">
+                    <Border x:Name="border" BorderThickness="{TemplateBinding BorderThickness}" BorderBrush="{TemplateBinding BorderBrush}"  CornerRadius="20">
+                        <ScrollViewer x:Name="PART_ContentHost" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
     </Style>
 </ResourceDictionary>

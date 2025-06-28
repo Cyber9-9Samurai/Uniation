@@ -49,7 +49,8 @@ namespace Uniation.ViewModels.Popups
                 }
                 else
                 {
-                    string jsonstr = JsonConvert.SerializeObject(p, Formatting.Indented);
+
+                    string jsonstr = JsonConvert.SerializeObject(new List<DonatedProject>() { p }, Formatting.Indented);
                     File.Create(path).Close();
                     await File.WriteAllTextAsync(path, jsonstr);
                 }

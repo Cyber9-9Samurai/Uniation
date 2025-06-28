@@ -70,10 +70,10 @@ namespace Uniation.ViewModels.Pages
         private void Cancel()
         {
             PlaceholderVis = Visibility.Visible;
-            SelectedIndex = 1;
+            SelectedIndex = 0;
             IsOneHundredChecked = true;
             Sum = "";
-            choosenRadioBtn = "100P";
+            choosenRadioBtn = "100 ₽";
         }
 
         [RelayCommand]
@@ -127,6 +127,7 @@ namespace Uniation.ViewModels.Pages
         [RelayCommand]
         private void UserChoose(string cont)
         {
+            
             Sum = "";
             PlaceholderVis = Visibility.Visible;
             choosenRadioBtn = cont;

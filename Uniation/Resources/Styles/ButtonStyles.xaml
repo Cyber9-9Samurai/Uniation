@@ -94,4 +94,75 @@
         <Setter Property="Button.Margin" Value="-836,656,0,0"/>
         <Setter Property="Control.Width" Value="823"/>
     </Style>
+
+    <Style x:Key="CustomRadioBtn">
+        <Setter Property="RadioButton.FontFamily" Value="{StaticResource din-regular}"/>
+        <Setter Property="RadioButton.FontSize" Value="30"/>
+        <Setter Property="RadioButton.Margin" Value="0,0,64,0"/>
+        <Setter Property="RadioButton.Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="RadioButton">
+                    <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                        
+                        
+                        <Border x:Name="OuterCircle"
+                            Width="49"
+                            Height="49"
+                            CornerRadius="24.5"
+                            BorderThickness="1"
+                            BorderBrush="#1E1E1E"
+                            Background="{TemplateBinding Background}"
+                            VerticalAlignment="Center">
+                            
+                            
+                            <Ellipse x:Name="InnerCircle"
+                                 Width="22"
+                                 Height="22"
+                                 Fill="Transparent"
+                                 VerticalAlignment="Center"
+                                 HorizontalAlignment="Center"/>
+                        </Border>
+                        
+                        
+                        <ContentPresenter x:Name="Content"
+                                      Margin="12,0,0,0"
+                                      VerticalAlignment="Center"
+                                      RecognizesAccessKey="True"/>
+                    </StackPanel>
+                    
+                    
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsChecked" Value="True">
+                            <Setter TargetName="InnerCircle" Property="Fill" Value="#E31E24"/>
+                            <Setter TargetName="OuterCircle" Property="BorderBrush" Value="#E31E24"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+     </Style>
+
+    <Style x:Key="KeyBoardNumberBtn">
+        <Setter Property="Button.Width" Value="88"/>
+        <Setter Property="Button.Height" Value="88"/>
+        <Setter Property="Button.FontFamily" Value="{StaticResource open-sans}"/>
+        <Setter Property="Button.FontSize" Value="27"/>
+        <Setter Property="Button.Background" Value="White"/>
+        <Setter Property="Button.BorderThickness" Value="0"/>
+        <Setter Property="Button.Margin" Value="0 0 15 15"/>
+        <Setter Property="Button.Template">
+            <Setter.Value >
+                <ControlTemplate TargetType="Button">
+                    <Border x:Name="border" Background="{TemplateBinding Background}" BorderThickness="{TemplateBinding BorderThickness }" BorderBrush="{TemplateBinding BorderBrush}" CornerRadius="20">
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="KeyBordDeleteBtn" BasedOn="{StaticResource KeyBoardNumberBtn}">
+        <Setter Property="Button.Width" Value="191"/>
+        <Setter Property="Button.Height" Value="83"/>
+    </Style>
 </ResourceDictionary>

@@ -19,6 +19,8 @@
         <Button Content="Назад" Style="{StaticResource ReturnButton}" Command="{Binding ReturnCommand}"/>
         <TextBlock Style="{StaticResource PageTitle}" Text="Наши проекты"/>
         <Image Style="{StaticResource Logo2}" Source="/Resources/Images/logo.png" />
+        <Image Style="{StaticResource ProjBack1}" Source="/Resources/Images/OurProj1.png"/>
+        <Image Style="{StaticResource ProjBack2}" Source="/Resources/Images/OurProj2.png"/>
         <ScrollViewer Style="{StaticResource ProjectCards}">
             <ItemsControl ItemsSource="{Binding Projects}">
                 <ItemsControl.ItemsPanel>

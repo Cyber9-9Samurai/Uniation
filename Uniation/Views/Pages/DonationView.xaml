@@ -11,72 +11,74 @@
              d:DataContext="{d:DesignInstance pages:DonationPageViewModel}">
     <Grid>
         <Button Content="Назад" Style="{StaticResource ReturnButton}" Command="{Binding ReturnCommand}"/>
-        <Canvas>
-            <TextBlock Canvas.Top="10" Text="Выберите проект"/>
-            <ComboBox Canvas.Top="30" ItemsSource="{Binding Projects}" SelectedIndex="{Binding SelectedIndex}">
+        <Image Source="/Resources/Images/logo.png" Style="{StaticResource Logo2}"/>
+        <Image Source="/Resources/Images/ProjectCardBG.png" Style="{StaticResource ProjCardBG}"/>
+        <Canvas Style="{StaticResource DonationPanel}">
+            <TextBlock Style="{StaticResource DonationProjectChoose}" Text="Выберите проект"/>
+            <ComboBox Style="{StaticResource DonationComboBox}"  ItemsSource="{Binding Projects}" SelectedIndex="{Binding SelectedIndex}">
                 <ComboBox.ItemTemplate>
                     <DataTemplate>
                         <TextBlock Text="{Binding title}"/>
                     </DataTemplate>
                 </ComboBox.ItemTemplate>
             </ComboBox>
-            <TextBlock Canvas.Top="60" Text="Укажите сумму пожертвования"/>
-            <WrapPanel Canvas.Top="80">
-                <RadioButton  GroupName="Sum" IsChecked="{Binding IsOneHundredChecked}">
-                    <StackPanel>
-                        <b:Interaction.Triggers>
+            <TextBlock Style="{StaticResource ChooseSum}" Text="Укажите сумму пожертвования"/>
+            <WrapPanel Canvas.Top="443" Canvas.Left="50">
+                <RadioButton Style="{StaticResource CustomRadioBtn}"  GroupName="Sum" IsChecked="{Binding IsOneHundredChecked}">
+                    <b:Interaction.Triggers>
                             <b:EventTrigger EventName="Checked">
-                                <b:InvokeCommandAction Command="{Binding UserChooseCommand}" CommandParameter="100P"/>
+                                <b:InvokeCommandAction Command="{Binding UserChooseCommand}" CommandParameter="100 ₽"/>
                             </b:EventTrigger>
-                        </b:Interaction.Triggers>
-                        <TextBlock Text="100P"/>
-                    </StackPanel>
+                     </b:Interaction.Triggers>
+                     <TextBlock Text="100P"/>
                 </RadioButton>
-                <RadioButton GroupName="Sum" IsChecked="{Binding IsFiveHundredChecked}">
+                <RadioButton Style="{StaticResource CustomRadioBtn}" GroupName="Sum" IsChecked="{Binding IsFiveHundredChecked}">
                     <b:Interaction.Triggers>
                         <b:EventTrigger EventName="Checked">
-                            <b:InvokeCommandAction Command="{Binding UserChooseCommand}" CommandParameter="500P"/>
+                            <b:InvokeCommandAction Command="{Binding UserChooseCommand}" CommandParameter="500 ₽"/>
                         </b:EventTrigger>
                     </b:Interaction.Triggers>
                     <TextBlock Text="500P"/>
                 </RadioButton>
-                <RadioButton GroupName="Sum"  IsChecked="{Binding IsOneThousendChecked}">
+                <RadioButton Style="{StaticResource CustomRadioBtn}" GroupName="Sum"  IsChecked="{Binding IsOneThousendChecked}">
                     <b:Interaction.Triggers>
                         <b:EventTrigger EventName="Checked">
-                            <b:InvokeCommandAction Command="{Binding UserChooseCommand}" CommandParameter="1000P"/>
+                            <b:InvokeCommandAction Command="{Binding UserChooseCommand}" CommandParameter="1000 ₽"/>
                         </b:EventTrigger>
                     </b:Interaction.Triggers>
                     <TextBlock Text="1000P"/>
                 </RadioButton>
-                <RadioButton GroupName="Sum"  IsChecked="{Binding IsFiveThousandsChecked}">
+                <RadioButton Style="{StaticResource CustomRadioBtn}" GroupName="Sum"  IsChecked="{Binding IsFiveThousandsChecked}">
                     <b:Interaction.Triggers>
                         <b:EventTrigger EventName="Checked">
-                            <b:InvokeCommandAction Command="{Binding UserChooseCommand}" CommandParameter="5000P"/>
+                            <b:InvokeCommandAction Command="{Binding UserChooseCommand}" CommandParameter="5000 ₽"/>
                         </b:EventTrigger>
                     </b:Interaction.Triggers>
                     <TextBlock Text="5000P"/>
                 </RadioButton>
             </WrapPanel>
-            <TextBlock Canvas.Top="120" Text="{Binding Sum}"/>
-            <TextBlock Canvas.Top="120" Text="Своя сумма" Visibility="{Binding PlaceholderVis}"/>
-            <TextBlock Canvas.Top="140" Text="Минимальная сумма пожертвования 10P"/>
-            <WrapPanel>
-                <Button Canvas.Top="160" Style="{StaticResource DonationCancel}" Content="Отмена" Command="{Binding CancelCommand}"/>
-                <Button Canvas.Top="180" Style="{StaticResource DonationAcc}" Content="Пожертвовать" Command="{Binding DonateCommand}"/>
+            <TextBox Style="{StaticResource SumDisplay}" Text="{Binding Sum}"/> 
+            <TextBlock Style="{StaticResource PlaceholderText}" Text="Своя сумма" Visibility="{Binding PlaceholderVis}"/>
+            <TextBlock Style="{StaticResource WarningText}" Text="Минимальная сумма пожертвования 10P"/>
+            <WrapPanel Canvas.Left="907" Canvas.Top="631">
+                <Button Style="{StaticResource DonationCancel}" Content="Отмена" Command="{Binding CancelCommand}"/>
+                <Button Style="{StaticResource DonationAcc}" Content="Пожертвовать" Command="{Binding DonateCommand}"/>
             </WrapPanel>
-            <WrapPanel Canvas.Top="200">
-                <Button Content="1" Command="{Binding InputSumCommand}" CommandParameter="1"/>
-                <Button Content="2" Command="{Binding InputSumCommand}" CommandParameter="2"/>
-                <Button Content="3" Command="{Binding InputSumCommand}" CommandParameter="3"/>
-                <Button Content="4" Command="{Binding InputSumCommand}" CommandParameter="4"/>
-                <Button Content="5" Command="{Binding InputSumCommand}" CommandParameter="5"/>
-                <Button Content="6" Command="{Binding InputSumCommand}" CommandParameter="6"/>
-                <Button Content="7" Command="{Binding InputSumCommand}" CommandParameter="7"/>
-                <Button Content="8" Command="{Binding InputSumCommand}" CommandParameter="8"/>
-                <Button Content="9" Command="{Binding InputSumCommand}" CommandParameter="9"/>
-                <Button Content="0" Command="{Binding InputSumCommand}" CommandParameter="0"/>
-                <Button Content="x" Command="{Binding InputSumCommand}" CommandParameter="-1"/>
-            </WrapPanel>
+            <Border Style="{StaticResource KeyBoard}" HorizontalAlignment="Center" Canvas.Left="1139" Canvas.Top="80" VerticalAlignment="Center">
+                <WrapPanel>
+                    <Button Style="{StaticResource KeyBoardNumberBtn}" Content="1" Command="{Binding InputSumCommand}" CommandParameter="1"/>
+                    <Button Style="{StaticResource KeyBoardNumberBtn}" Content="2" Command="{Binding InputSumCommand}" CommandParameter="2"/>
+                    <Button Style="{StaticResource KeyBoardNumberBtn}" Content="3" Command="{Binding InputSumCommand}" CommandParameter="3"/>
+                    <Button Style="{StaticResource KeyBoardNumberBtn}" Content="4" Command="{Binding InputSumCommand}" CommandParameter="4"/>
+                    <Button Style="{StaticResource KeyBoardNumberBtn}" Content="5" Command="{Binding InputSumCommand}" CommandParameter="5"/>
+                    <Button Style="{StaticResource KeyBoardNumberBtn}" Content="6" Command="{Binding InputSumCommand}" CommandParameter="6"/>
+                    <Button Style="{StaticResource KeyBoardNumberBtn}" Content="7" Command="{Binding InputSumCommand}" CommandParameter="7"/>
+                    <Button Style="{StaticResource KeyBoardNumberBtn}" Content="8" Command="{Binding InputSumCommand}" CommandParameter="8"/>
+                    <Button Style="{StaticResource KeyBoardNumberBtn}" Content="9" Command="{Binding InputSumCommand}" CommandParameter="9"/>
+                    <Button Style="{StaticResource KeyBoardNumberBtn}" Content="0" Command="{Binding InputSumCommand}" CommandParameter="0"/>
+                    <Button Style="{StaticResource KeyBordDeleteBtn}" Content="x" Command="{Binding InputSumCommand}" CommandParameter="-1"/>
+                </WrapPanel>
+            </Border>
         </Canvas>
     </Grid>
 </UserControl>

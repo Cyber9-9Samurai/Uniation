@@ -20,6 +20,9 @@
     <None Remove="Resources\Images\FourthSlide.png" />
     <None Remove="Resources\Images\logo.png" />
     <None Remove="Resources\Images\MainPageBack.png" />
+    <None Remove="Resources\Images\OurProj1.png" />
+    <None Remove="Resources\Images\OurProj2.png" />
+    <None Remove="Resources\Images\ProjectCardBG.png" />
     <None Remove="Resources\Images\RedHighlight.png" />
     <None Remove="Resources\Images\SecondSlide.png" />
     <None Remove="Resources\Images\ThirdSlide.png" />
@@ -68,6 +71,9 @@
     <Resource Include="Resources\Images\ei_spinner.png" />
     <Resource Include="Resources\Images\logo.png" />
     <Resource Include="Resources\Images\MainPageBack.png" />
+    <Resource Include="Resources\Images\OurProj1.png" />
+    <Resource Include="Resources\Images\OurProj2.png" />
+    <Resource Include="Resources\Images\ProjectCardBG.png" />
     <Resource Include="Resources\Images\RedHighlight.png" />
   </ItemGroup>
 

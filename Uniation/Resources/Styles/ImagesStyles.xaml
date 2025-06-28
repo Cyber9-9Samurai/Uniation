@@ -29,4 +29,21 @@
         <Setter Property="Control.Height" Value="463"/>
         <Setter Property="Control.Margin" Value="-836,-36,0,0"/>
     </Style>
+
+    <Style x:Key="ProjBack1">
+        <Setter Property="Control.Width" Value="703"/>
+        <Setter Property="Control.Height" Value="652"/>
+        <Setter Property="Control.HorizontalAlignment" Value="Left"/>
+        <Setter Property="Control.VerticalAlignment" Value="Bottom"/>
+    </Style>
+    <Style x:Key="ProjBack2">
+        <Setter Property="Control.Width" Value="658"/>
+        <Setter Property="Control.Height" Value="554"/>
+        <Setter Property="Control.HorizontalAlignment" Value="Right"/>
+        <Setter Property="Control.Margin" Value="0,196,0,0"/>
+    </Style>
+
+    <Style x:Key="ProjCardBG">
+        <Setter Property="Control.VerticalAlignment" Value="Bottom"/>
+    </Style>
 </ResourceDictionary>

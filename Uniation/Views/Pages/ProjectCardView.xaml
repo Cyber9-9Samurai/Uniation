@@ -10,6 +10,7 @@
              d:DataContext="{d:DesignInstance pages:ProjectCardViewModel}">
     <Grid>
         <Button Content="Назад" Style="{StaticResource ReturnButton}" Command="{Binding ReturnCommand}"/>
+        <Image Source="/Resources/Images/ProjectCardBG.png" Style="{StaticResource ProjCardBG}"/>
         <Button Content="Пожертвовать" Style="{StaticResource ProjCartDonation}" Command="{Binding ToDonationCommand}"/>
         <Image Source="/Resources/Images/logo.png" Style="{StaticResource Logo2}"/>
         <TextBlock Style="{StaticResource PageTitle}" Text="{Binding Project.title}"/>
