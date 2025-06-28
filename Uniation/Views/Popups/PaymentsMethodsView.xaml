@@ -13,9 +13,9 @@
             <Image/>
             <TextBlock Text="Выберите способ пожертвования"/>
             <TextBlock Text="{Binding Sum}"/>
-            <Button Content="Картой" Command="{Binding ChooseCommand}" CommandParameter="card"/>
-            <Button Content="По QR-коду" Command="{Binding ChooseCommand}" CommandParameter="QR"/>
-            <Button Content="Отмена" Command="{Binding CancelCommand}"/>
+            <Button Content="Картой" Style="{StaticResource PopupLink}" Command="{Binding ChooseCommand}" CommandParameter="card"/>
+            <Button Content="По QR-коду" Style="{StaticResource PopupLink}" Command="{Binding ChooseCommand}" CommandParameter="QR"/>
+            <Button Content="Отмена" Style="{StaticResource PopupCancel}" Command="{Binding CancelCommand}"/>
         </StackPanel>
         
     </Grid>

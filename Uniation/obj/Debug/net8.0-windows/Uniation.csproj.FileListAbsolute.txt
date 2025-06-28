@@ -96,3 +96,5 @@ E:\MVS projects\Uniation\Uniation\obj\Debug\net8.0-windows\Views\Popups\Succsess
 E:\MVS projects\Uniation\Uniation\obj\Debug\net8.0-windows\Views\Popups\SuccsessfulDonationView.baml
 E:\MVS projects\Uniation\Uniation\obj\Debug\net8.0-windows\Views\Pages\AboutPageView.g.cs
 E:\MVS projects\Uniation\Uniation\obj\Debug\net8.0-windows\Views\Pages\AboutPageView.baml
+E:\MVS projects\Uniation\Uniation\obj\Debug\net8.0-windows\Resources\Styles\ElementsContainersStyles.baml
+E:\MVS projects\Uniation\Uniation\obj\Debug\net8.0-windows\Resources\Styles\ImagesStyles.baml

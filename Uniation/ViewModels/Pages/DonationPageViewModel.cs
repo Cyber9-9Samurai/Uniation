@@ -34,26 +34,28 @@ namespace Uniation.ViewModels.Pages
         private readonly NavigationService<MainPageViewModel> _mainNav;
         private readonly NavigationService<PaymentsMethodsViewModel> _popup;
         private readonly NavigationHelper _navigationHelper;
-        private ProjectsData zeroProj = new();
+        
         private string choosenRadioBtn;
 
        
         public DonationPageViewModel(NavigationService<MainPageViewModel> mainNav,ApiService apiService,NavigationService<PaymentsMethodsViewModel> popup,NavigationHelper navigationHelper)
         {
             _mainNav = mainNav;
-            SetDefaultSettings();
             Projects = apiService.projects;
             _popup = popup;
             _navigationHelper = navigationHelper;
-            Projects.Insert(0,zeroProj);
+            SetDefaultSettings();
         }
 
         private void SetDefaultSettings()
         {
-            zeroProj.id = -1;
-            zeroProj.title = "Без проекта";
-            zeroProj.description = "";
-            zeroProj.image = "";
+            Projects.Insert(0, new ProjectsData()
+            {
+                id = -1,
+                title = "Без проекта",
+                description = "",
+                image = ""
+            });
             Cancel();
         }
 
@@ -68,7 +70,7 @@ namespace Uniation.ViewModels.Pages
         private void Cancel()
         {
             PlaceholderVis = Visibility.Visible;
-            SelectedIndex = 0;
+            SelectedIndex = 1;
             IsOneHundredChecked = true;
             Sum = "";
             choosenRadioBtn = "100P";

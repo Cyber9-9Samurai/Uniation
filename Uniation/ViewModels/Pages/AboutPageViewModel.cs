@@ -48,7 +48,11 @@ namespace Uniation.ViewModels.Pages
 
         private void SetImage()
         {
-            ImagePath = "/Resources/Images/" + slides[index];
+            if(slides.Count > 0)
+            {
+                ImagePath = "/Resources/Images/" + slides[index];
+            }
+            
         }
 
         [RelayCommand]

@@ -14,7 +14,7 @@ namespace Uniation.ViewModels.Pages
         private readonly NavigationService<ProjectCardViewModel> _projCart;
 
         [ObservableProperty]
-        public List<ProjectsData> projects;
+        public List<ProjectsData> projects = new();
 
         [ObservableProperty]
         public int selectedItem;
@@ -32,8 +32,17 @@ namespace Uniation.ViewModels.Pages
 
         private void LoadData()
         {
-            Projects = _apiService.projects;
             
+            foreach(var p in _apiService.projects)
+            {
+                Projects.Add(new ProjectsData()
+                {
+                    id = p.id,
+                    title = p.title,
+                    description = p.description.Split('.')[0].Remove(0,5) + ".",
+                    image = "http://api-sdr.itlabs.top" + p.image
+                });
+            }
         }
 
         [RelayCommand]

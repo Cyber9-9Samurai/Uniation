@@ -10,7 +10,7 @@
              d:DesignHeight="1080" d:DesignWidth="1920"
              d:DataContext="{d:DesignInstance pages:DonationPageViewModel}">
     <Grid>
-        <Button Content="Назад" Margin="-1800,-800,0,0" Height="80" Width="100" Command="{Binding ReturnCommand}"/>
+        <Button Content="Назад" Style="{StaticResource ReturnButton}" Command="{Binding ReturnCommand}"/>
         <Canvas>
             <TextBlock Canvas.Top="10" Text="Выберите проект"/>
             <ComboBox Canvas.Top="30" ItemsSource="{Binding Projects}" SelectedIndex="{Binding SelectedIndex}">
@@ -60,8 +60,10 @@
             <TextBlock Canvas.Top="120" Text="{Binding Sum}"/>
             <TextBlock Canvas.Top="120" Text="Своя сумма" Visibility="{Binding PlaceholderVis}"/>
             <TextBlock Canvas.Top="140" Text="Минимальная сумма пожертвования 10P"/>
-            <Button Canvas.Top="160" Content="Отмена" Command="{Binding CancelCommand}"/>
-            <Button Canvas.Top="180" Content="Пожертвовать" Command="{Binding DonateCommand}"/>
+            <WrapPanel>
+                <Button Canvas.Top="160" Style="{StaticResource DonationCancel}" Content="Отмена" Command="{Binding CancelCommand}"/>
+                <Button Canvas.Top="180" Style="{StaticResource DonationAcc}" Content="Пожертвовать" Command="{Binding DonateCommand}"/>
+            </WrapPanel>
             <WrapPanel Canvas.Top="200">
                 <Button Content="1" Command="{Binding InputSumCommand}" CommandParameter="1"/>
                 <Button Content="2" Command="{Binding InputSumCommand}" CommandParameter="2"/>

@@ -13,7 +13,7 @@
             <Image/>
             <TextBlock Text="Пожертвование успешно отправлено"/>
             <TextBlock Text="Спасибо за ваше участие!"/>
-            <Button Content="Закрыть" Command="{Binding CloseCommand}"/>
+            <Button Content="Закрыть" Style="{StaticResource PopupCloseSuc}" Command="{Binding CloseCommand}"/>
         </StackPanel>
     </Grid>
 </UserControl>

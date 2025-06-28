@@ -47,7 +47,25 @@ namespace Uniation.ViewModels.Pages
 
         private void LoadData()
         {
-            Project = _apiService.projects.FirstOrDefault(p=> p.id==Id);
+            var project = _apiService.projects.FirstOrDefault(p=> p.id==Id);
+            Project = new ProjectsData()
+            {
+                id = project.id,
+                title = project.title,
+                description = project.description,
+                image = project.image
+            };
+            Project.description = Project.description.Replace("<div>","");
+            Project.description = Project.description.Replace("</div>", "");
+            Project.description = Project.description.Replace("<br><br>", "\n");
+            Project.description = Project.description.Replace("<br>", "\n");
+            Project.description = Project.description.Replace("&nbsp;", "");
+            Project.description = Project.description.Replace("<strong>", "");
+            Project.description = Project.description.Replace("</strong>", "");
+            Project.description = Project.description.Replace("<blockquote>", "");
+            Project.description = Project.description.Replace("</blockquote>", "");
+            Project.description = Project.description.Replace("<em>", "");
+            Project.description = Project.description.Replace("</em>", "");
             Image = "http://api-sdr.itlabs.top" + Project.image;
             Debug.WriteLine(Project.title);
             Debug.WriteLine(Project.image);

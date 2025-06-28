@@ -11,12 +11,25 @@
              d:DataContext="{d:DesignInstance pages:MainPageViewModel}"
              x:Name="MainPage">
     <Grid>
-        <StackPanel>
-            <WrapPanel>
-                <Button Style="{StaticResource BlueMainMenuButton}" Command="{Binding ToProjectsCommand}" >Наши проекты</Button>
-                <Button Style="{StaticResource BlueMainMenuButton}" Command="{Binding ToAboutCommand}">Об организации</Button>
-            </WrapPanel>
-            <Button Style="{StaticResource RedMainMenuButton}" Command="{Binding ToDonatioonsCommand}">Пожертвовать</Button>
+        <Image Source="/Resources/Images/MainPageBack.png" Style="{StaticResource Mainback}"/>
+        <Image Source="/Resources/Images/logo.png" Style="{StaticResource Logo}"/>
+        <StackPanel Style="{StaticResource MainPageGreeting}">
+            <TextBlock Style="{StaticResource GreatingHeader}" Text="В течение 10 лет мы помогаем людям замечать проблемы тех, кто рядом, и уметь протянуть руку помощи в нужный момент"/>
+            <StackPanel Style="{StaticResource GreetingRow}">
+                <TextBlock Style="{StaticResource GreatingTitle}" Text="Кто мы?"/>
+                <TextBlock Style="{StaticResource GreatingText}" Text="Мы неравнодушные люди Забайкалья, объединенные в одну добрую команду, помогающую помогать"/>
+            </StackPanel>
+            <StackPanel Style="{StaticResource GreetingRow}">
+                <TextBlock Style="{StaticResource GreatingTitle2}" Text="Что делаем?"/>
+                <TextBlock Style="{StaticResource GreatingText2}" Text="Помогаем тем, кто нуждается в нашей помощи (семьям и пожилым в трудной жизненной ситуации, сиротам, выпускникам детских домов, отказникам, приемным семьям)"/>
+            </StackPanel>
+            <StackPanel Style="{StaticResource GreetingRow}">
+                <WrapPanel>
+                    <Button Margin="130,0,26,0" Style="{StaticResource BlueMainMenuButton}" Command="{Binding ToProjectsCommand}" >Наши проекты</Button>
+                    <Button Style="{StaticResource BlueMainMenuButton}" Command="{Binding ToAboutCommand}">Об организации</Button>
+                </WrapPanel>
+                <Button Style="{StaticResource RedMainMenuButton}" Command="{Binding ToDonatioonsCommand}">Пожертвовать</Button>
+            </StackPanel>
         </StackPanel>
     </Grid>
 </UserControl>

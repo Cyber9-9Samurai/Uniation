@@ -14,7 +14,7 @@
             <TextBlock Text="Поднесите карту"/>
             <TextBlock Text="Пожалуйста, приложите карту к терминалу для завершения пожертвования"/>
             <TextBlock Text="{Binding Sum}"/>
-            <Button Content="Отмена" Command="{Binding CancelCommand}" />
+            <Button Content="Отмена" Style="{StaticResource PopupCancel}" Command="{Binding CancelCommand}" />
         </StackPanel>
     </Grid>
 </UserControl>

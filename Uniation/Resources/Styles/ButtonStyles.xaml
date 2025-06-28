@@ -18,12 +18,80 @@
             </Setter.Value>
         </Setter>
     </Style>
+    
     <Style x:Key="BlueMainMenuButton">
-        <Setter Property="Control.Width" Value="411.5"/>
-        <Setter Property="Control.Height" Value="120"/>
+        <Setter Property="Button.Width" Value="411.5"/>
+        <Setter Property="Button.Height" Value="120"/>
+        <Setter Property="Button.FontFamily" Value="{StaticResource din-meduim}"/>
+        <Setter Property="Button.FontSize" Value="40"/>
+        <Setter Property="Button.Background" Value="#2683F1"/>
+        <Setter Property="Button.Foreground" Value="#FFFFFF"/>
+        <Setter Property="Button.BorderThickness" Value="0"/>
+        <Setter Property="Button.Margin" Value="0 0 26 0"/>
+        <Setter Property="Button.Template">
+            <Setter.Value >
+                <ControlTemplate TargetType="Button">
+                    <Border x:Name="border" Background="{TemplateBinding Background}" BorderThickness="{TemplateBinding BorderThickness }" BorderBrush="{TemplateBinding BorderBrush}" CornerRadius="16">
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
     </Style>
-    <Style x:Key="RedMainMenuButton">
+
+    <Style x:Key="RedMainMenuButton" BasedOn="{StaticResource BlueMainMenuButton}">
         <Setter Property="Control.Width" Value="849"/>
         <Setter Property="Control.Height" Value="120"/>
+        <Setter Property="Button.Background" Value="#E31E24"/>
+        <Setter Property="Button.Margin" Value="0 26 0 0"/>
+    </Style>
+
+    <Style x:Key="ReturnButton" BasedOn="{StaticResource BlueMainMenuButton}">
+        <Setter Property="Button.Width" Value="212"/>
+        <Setter Property="Button.Height" Value="80"/>
+        <Setter Property="Button.FontSize" Value="32"/>
+        <Setter Property="Button.Background" Value="#FFFFFF"/>
+        <Setter Property="Button.Foreground" Value="#E31E24"/>
+        <Setter Property="Button.BorderThickness" Value="2"/>
+        <Setter Property="Button.Margin" Value="-1548,-846,0,0"/>
+        <Setter Property="Button.BorderBrush">
+            <Setter.Value>
+                <SolidColorBrush Color="#E31E24"/>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="DonationCancel" BasedOn="{StaticResource ReturnButton}">
+        <Setter Property="Button.Width" Value="388.5"/>
+        <Setter Property="Button.Height" Value="120"/>
+        <Setter Property="Button.FontSize" Value="40"/>
+        <Setter Property="Button.Background" Value="#FFFFFF"/>
+        <Setter Property="Button.Foreground" Value="#E31E24"/>
+        <Setter Property="Button.BorderThickness" Value="2"/>
+        <Setter Property="Button.Margin" Value="0,0,0,0"/>
+    </Style>
+
+    <Style x:Key="DonationAcc" BasedOn="{StaticResource RedMainMenuButton}">
+        <Setter Property="Button.Width" Value="388.5"/>
+        <Setter Property="Button.Height" Value="120"/>
+        <Setter Property="Button.Margin" Value="26,0,0,0"/>
+    </Style>
+
+    <Style x:Key="PopupLink" BasedOn="{StaticResource RedMainMenuButton}">
+        <Setter Property="Button.Width" Value="762"/>
+        <Setter Property="Button.Height" Value="120"/>
+        <Setter Property="Button.Margin" Value="0,0,0,0"/>
+    </Style>
+    <Style x:Key="PopupCancel" BasedOn="{StaticResource DonationCancel}">
+        <Setter Property="Button.Width" Value="762"/>
+        <Setter Property="Button.Height" Value="120"/>
+        <Setter Property="Button.Margin" Value="0,0,0,0"/>
+    </Style>
+    <Style x:Key="PopupCloseSuc" BasedOn="{StaticResource PopupLink}">
+        <Setter Property="Button.Background" Value="#51D169"/>
+    </Style>
+    <Style x:Key="ProjCartDonation" BasedOn="{StaticResource RedMainMenuButton}">
+        <Setter Property="Button.Margin" Value="-836,656,0,0"/>
+        <Setter Property="Control.Width" Value="823"/>
     </Style>
 </ResourceDictionary>

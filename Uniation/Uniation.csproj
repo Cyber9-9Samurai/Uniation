@@ -9,10 +9,18 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Resources\Images\1Slide.png" />
+    <None Remove="Resources\Images\2Slide.png" />
+    <None Remove="Resources\Images\3Slide.png" />
+    <None Remove="Resources\Images\4Slide.png" />
+    <None Remove="Resources\Images\5Slide.png" />
+    <None Remove="Resources\Images\BlueHighlight.png" />
     <None Remove="Resources\Images\ei_spinner.png" />
-    <None Remove="Resources\Images\FirstSlide.png" />
     <None Remove="Resources\Images\FivesSlide.png" />
     <None Remove="Resources\Images\FourthSlide.png" />
+    <None Remove="Resources\Images\logo.png" />
+    <None Remove="Resources\Images\MainPageBack.png" />
+    <None Remove="Resources\Images\RedHighlight.png" />
     <None Remove="Resources\Images\SecondSlide.png" />
     <None Remove="Resources\Images\ThirdSlide.png" />
   </ItemGroup>
@@ -51,12 +59,16 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="Resources\Images\1Slide.png" />
+    <Resource Include="Resources\Images\2Slide.png" />
+    <Resource Include="Resources\Images\3Slide.png" />
+    <Resource Include="Resources\Images\4Slide.png" />
+    <Resource Include="Resources\Images\5Slide.png" />
+    <Resource Include="Resources\Images\BlueHighlight.png" />
     <Resource Include="Resources\Images\ei_spinner.png" />
-    <Resource Include="Resources\Images\FirstSlide.png" />
-    <Resource Include="Resources\Images\FivesSlide.png" />
-    <Resource Include="Resources\Images\FourthSlide.png" />
-    <Resource Include="Resources\Images\SecondSlide.png" />
-    <Resource Include="Resources\Images\ThirdSlide.png" />
+    <Resource Include="Resources\Images\logo.png" />
+    <Resource Include="Resources\Images\MainPageBack.png" />
+    <Resource Include="Resources\Images\RedHighlight.png" />
   </ItemGroup>
 
 </Project>

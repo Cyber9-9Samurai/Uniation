@@ -14,8 +14,8 @@
             <TextBlock Text="Отсканируйте QR-код на терминале"/>
             <TextBlock Text="Пожалуйста, отсканируйте QR код для завершения пожертвования"/>
             <TextBlock Text="{Binding Sum}"/>
-            <Button Content="На главную" Command="{Binding ToMainCommand}"/>
-            <Button Content="Отмена" Command="{Binding CancelCommand}" />
+            <Button Content="На главную" Style="{StaticResource PopupLink}" Command="{Binding ToMainCommand}"/>
+            <Button Content="Отмена" Style="{StaticResource PopupCancel}" Command="{Binding CancelCommand}" />
         </StackPanel>
     </Grid>
 </UserControl>

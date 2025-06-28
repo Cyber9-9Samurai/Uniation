@@ -8,6 +8,8 @@
                 <ResourceDictionary Source="/Resources/CommonBrushes.xaml"/>
                 <ResourceDictionary Source="/Resources/Styles/TextStyles.xaml"/>
                 <ResourceDictionary Source="/Resources/Styles/ButtonStyles.xaml"/>
+                <ResourceDictionary Source="/Resources/Styles/ElementsContainersStyles.xaml"/>
+                <ResourceDictionary Source="/Resources/Styles/ImagesStyles.xaml"/>
                 <ResourceDictionary Source="/Resources/DataTemplates/PopupDataTemplates.xaml"/>
                 <ResourceDictionary Source="/Resources/DataTemplates/PagesDataTemplates.xaml"/>
             </ResourceDictionary.MergedDictionaries>
