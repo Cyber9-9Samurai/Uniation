@@ -30,7 +30,7 @@
                                 <b:InvokeCommandAction Command="{Binding UserChooseCommand}" CommandParameter="100 ₽"/>
                             </b:EventTrigger>
                      </b:Interaction.Triggers>
-                     <TextBlock Text="100P"/>
+                    <TextBlock Text="100₽"/>
                 </RadioButton>
                 <RadioButton Style="{StaticResource CustomRadioBtn}" GroupName="Sum" IsChecked="{Binding IsFiveHundredChecked}">
                     <b:Interaction.Triggers>
@@ -38,7 +38,7 @@
                             <b:InvokeCommandAction Command="{Binding UserChooseCommand}" CommandParameter="500 ₽"/>
                         </b:EventTrigger>
                     </b:Interaction.Triggers>
-                    <TextBlock Text="500P"/>
+                    <TextBlock Text="500₽"/>
                 </RadioButton>
                 <RadioButton Style="{StaticResource CustomRadioBtn}" GroupName="Sum"  IsChecked="{Binding IsOneThousendChecked}">
                     <b:Interaction.Triggers>
@@ -46,7 +46,7 @@
                             <b:InvokeCommandAction Command="{Binding UserChooseCommand}" CommandParameter="1000 ₽"/>
                         </b:EventTrigger>
                     </b:Interaction.Triggers>
-                    <TextBlock Text="1000P"/>
+                    <TextBlock Text="1000₽"/>
                 </RadioButton>
                 <RadioButton Style="{StaticResource CustomRadioBtn}" GroupName="Sum"  IsChecked="{Binding IsFiveThousandsChecked}">
                     <b:Interaction.Triggers>
@@ -54,12 +54,12 @@
                             <b:InvokeCommandAction Command="{Binding UserChooseCommand}" CommandParameter="5000 ₽"/>
                         </b:EventTrigger>
                     </b:Interaction.Triggers>
-                    <TextBlock Text="5000P"/>
+                    <TextBlock Text="5000₽"/>
                 </RadioButton>
             </WrapPanel>
             <TextBox Style="{StaticResource SumDisplay}" Text="{Binding Sum}"/> 
             <TextBlock Style="{StaticResource PlaceholderText}" Text="Своя сумма" Visibility="{Binding PlaceholderVis}"/>
-            <TextBlock Style="{StaticResource WarningText}" Text="Минимальная сумма пожертвования 10P"/>
+            <TextBlock Style="{StaticResource WarningText}" Text="Минимальная сумма пожертвования 10₽"/>
             <WrapPanel Canvas.Left="907" Canvas.Top="631">
                 <Button Style="{StaticResource DonationCancel}" Content="Отмена" Command="{Binding CancelCommand}"/>
                 <Button Style="{StaticResource DonationAcc}" Content="Пожертвовать" Command="{Binding DonateCommand}"/>

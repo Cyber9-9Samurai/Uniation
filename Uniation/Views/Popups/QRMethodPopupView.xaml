@@ -9,13 +9,25 @@
              d:DesignHeight="450" d:DesignWidth="800"
              d:DataContext="{d:DesignInstance popups:QRMethodPopupViewModel}">
     <Grid>
-        <StackPanel Height="300" Width="300" Background="White">
-            <Image/>
-            <TextBlock Text="Отсканируйте QR-код на терминале"/>
-            <TextBlock Text="Пожалуйста, отсканируйте QR код для завершения пожертвования"/>
-            <TextBlock Text="{Binding Sum}"/>
-            <Button Content="На главную" Style="{StaticResource PopupLink}" Command="{Binding ToMainCommand}"/>
-            <Button Content="Отмена" Style="{StaticResource PopupCancel}" Command="{Binding CancelCommand}" />
-        </StackPanel>
+        <Canvas Style="{StaticResource QRMethodsContainer}">
+            <Rectangle Style="{StaticResource QRMethod}">
+                <Rectangle.Fill>
+                    <ImageBrush ImageSource="/Resources/Images/QRMethod.png" Stretch="Fill"/>
+                </Rectangle.Fill>
+            </Rectangle>
+            <TextBlock Style="{StaticResource QRMethodInfo}" Text="Отсканируйте
+                       QR-код 
+                       на терминале"/>
+            <TextBlock Style="{StaticResource QRMethodDesc}" Text="Пожалуйста, отсканируйте QR код для завершения пожертвования"/>
+                <TextBlock Style="{StaticResource QRMethodSum}">
+            К оплате: <Run Text="{Binding Sum}" Style="{StaticResource CardMethodSum2}"/>
+                    </TextBlock>
+            <StackPanel Style="{StaticResource QRMethodsButtonsContainer}">
+                <Button Content="На главную" Style="{StaticResource PopupLink}" Command="{Binding ToMainCommand}"/>
+                <Button Content="Отмена" Style="{StaticResource PopupCancel}" Command="{Binding CancelCommand}" />
+            </StackPanel>
+        </Canvas>
     </Grid>
+        
+        
 </UserControl>

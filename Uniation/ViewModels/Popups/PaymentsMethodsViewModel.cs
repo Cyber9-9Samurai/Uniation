@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Uniation.Helpers;
+using Uniation.Models;
 using Uniation.ViewModels.Pages;
 
 namespace Uniation.ViewModels.Popups
@@ -29,9 +30,9 @@ namespace Uniation.ViewModels.Popups
             _modalNavigationStore = modalNavigationStore;
             _cardMethodPopup = cardMethodPopup;
             _qrMethodPopup = qrMethodPopup;
-            if(navigationHelper.Parameter is string s)
+            if(navigationHelper.Parameter is DonatedProject p)
             {
-                Sum = s;
+                Sum = p.sum.ToString() + " ₽";
             }
             Debug.WriteLine(Sum);
         }

@@ -80,7 +80,7 @@
     <Style x:Key="PopupLink" BasedOn="{StaticResource RedMainMenuButton}">
         <Setter Property="Button.Width" Value="762"/>
         <Setter Property="Button.Height" Value="120"/>
-        <Setter Property="Button.Margin" Value="0,0,0,0"/>
+        <Setter Property="Button.Margin" Value="0,0,0,26"/>
     </Style>
     <Style x:Key="PopupCancel" BasedOn="{StaticResource DonationCancel}">
         <Setter Property="Button.Width" Value="762"/>
@@ -89,6 +89,8 @@
     </Style>
     <Style x:Key="PopupCloseSuc" BasedOn="{StaticResource PopupLink}">
         <Setter Property="Button.Background" Value="#51D169"/>
+        <Setter Property="Canvas.Top" Value="545"/>
+        <Setter Property="Canvas.Left" Value="79"/>
     </Style>
     <Style x:Key="ProjCartDonation" BasedOn="{StaticResource RedMainMenuButton}">
         <Setter Property="Button.Margin" Value="-836,656,0,0"/>
@@ -164,5 +166,10 @@
     <Style x:Key="KeyBordDeleteBtn" BasedOn="{StaticResource KeyBoardNumberBtn}">
         <Setter Property="Button.Width" Value="191"/>
         <Setter Property="Button.Height" Value="83"/>
+    </Style>
+
+    <Style x:Key="CardMethodPopupCancel" BasedOn="{StaticResource PopupCancel}">
+        <Setter Property="Canvas.Top" Value="307.5"/>
+        <Setter Property="Canvas.Left" Value="825"/>
     </Style>
 </ResourceDictionary>

@@ -283,6 +283,69 @@
             </Setter.Value>
         </Setter> 
     </Style>
-    
-    
+
+    <Style x:Key="PaymentMethodsContainer">
+        <Setter Property="Control.Width" Value="1755"/>
+        <Setter Property="Control.Height" Value="684"/>
+        <Setter Property="Control.Background" Value="#FFFFFF"/>
+        <Setter Property="Control.Clip" >
+            <Setter.Value>
+                <RectangleGeometry Rect="0,0,1755,684" RadiusX="30" RadiusY="30"/>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="PaymentMethodsButtonsContainer">
+        <Setter Property="Canvas.Top" Value="136"/>
+        <Setter Property="Canvas.Left" Value="865"/>
+    </Style>
+
+    <Style x:Key="CardMethodsContainer">
+        <Setter Property="Control.Width" Value="1715"/>
+        <Setter Property="Control.Height" Value="506"/>
+        <Setter Property="Control.Background" Value="#FFFFFF"/>
+        <Setter Property="Control.Clip" >
+            <Setter.Value>
+                <RectangleGeometry Rect="0,0,1715,506" RadiusX="30" RadiusY="30"/>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="QRMethodsContainer">
+        <Setter Property="Control.Width" Value="1594"/>
+        <Setter Property="Control.Height" Value="640"/>
+        <Setter Property="Control.Background" Value="#FFFFFF"/>
+        <Setter Property="Control.Clip" >
+            <Setter.Value>
+                <RectangleGeometry Rect="0,0,1594,640" RadiusX="30" RadiusY="30"/>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="QRMethodsButtonsContainer">
+        <Setter Property="Canvas.Top" Value="295.5"/>
+        <Setter Property="Canvas.Left" Value="704"/>
+    </Style>
+
+    <Style x:Key="WaitingContainer">
+        <Setter Property="Control.Width" Value="920"/>
+        <Setter Property="Control.Height" Value="486"/>
+        <Setter Property="Control.Background" Value="#FFFFFF"/>
+        <Setter Property="Control.Clip" >
+            <Setter.Value>
+                <RectangleGeometry Rect="0,0,920,486" RadiusX="30" RadiusY="30"/>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="SucCont">
+        <Setter Property="Control.Width" Value="920"/>
+        <Setter Property="Control.Height" Value="729"/>
+        <Setter Property="Control.Background" Value="#FFFFFF"/>
+        <Setter Property="Control.Clip" >
+            <Setter.Value>
+                <RectangleGeometry Rect="0,0,920,729" RadiusX="30" RadiusY="30"/>
+            </Setter.Value>
+        </Setter>
+    </Style>
 </ResourceDictionary>

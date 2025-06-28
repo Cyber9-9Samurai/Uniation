@@ -34,7 +34,7 @@ namespace Uniation.ViewModels.Popups
             _waitNav = waitNav;
             if (navigationHelper.Parameter is DonatedProject p)
             {
-                Sum = "К оплате: " + p.sum + "P";
+                Sum = p.sum + " ₽";
             }
             _timer = new System.Threading.Timer(TimerCallback, waitNav, 5000, Timeout.Infinite);
            

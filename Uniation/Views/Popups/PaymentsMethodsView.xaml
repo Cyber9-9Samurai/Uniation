@@ -9,14 +9,19 @@
              d:DesignHeight="450" d:DesignWidth="800"
              d:DataContext="{d:DesignInstance pages:PaymentsMethodsViewModel}">
     <Grid>
-        <StackPanel Width="300" Height="300" Background="White">
-            <Image/>
-            <TextBlock Text="Выберите способ пожертвования"/>
-            <TextBlock Text="{Binding Sum}"/>
-            <Button Content="Картой" Style="{StaticResource PopupLink}" Command="{Binding ChooseCommand}" CommandParameter="card"/>
-            <Button Content="По QR-коду" Style="{StaticResource PopupLink}" Command="{Binding ChooseCommand}" CommandParameter="QR"/>
-            <Button Content="Отмена" Style="{StaticResource PopupCancel}" Command="{Binding CancelCommand}"/>
-        </StackPanel>
-        
+        <Canvas Style="{StaticResource PaymentMethodsContainer}">
+            <Rectangle Style="{StaticResource PaymentMethod}">
+                <Rectangle.Fill>
+                    <ImageBrush ImageSource="/Resources/Images/PaymentMethod.png" Stretch="Fill"/>
+                </Rectangle.Fill>
+            </Rectangle>
+            <TextBlock Style="{StaticResource PaymentsMethodInfo}" Text="Выберите способ пожертвования"/>
+            <TextBlock Style="{StaticResource PaymentsMethodSum}" Text="{Binding Sum}"/>
+            <StackPanel Style="{StaticResource PaymentMethodsButtonsContainer}">
+                <Button Content="Картой" Style="{StaticResource PopupLink}" Command="{Binding ChooseCommand}" CommandParameter="card"/>
+                <Button Content="По QR-коду" Style="{StaticResource PopupLink}" Command="{Binding ChooseCommand}" CommandParameter="QR"/>
+                <Button Content="Отмена" Style="{StaticResource PopupCancel}" Command="{Binding CancelCommand}"/>
+            </StackPanel>
+        </Canvas>
     </Grid>
 </UserControl>

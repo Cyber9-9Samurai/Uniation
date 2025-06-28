@@ -11,7 +11,7 @@ namespace Uniation.ViewModels.Pages
     public partial class DonationPageViewModel : ObservableObject
     {
         [ObservableProperty]
-        private List<ProjectsData> projects;
+        private List<ProjectsData> projects = new();
 
         [ObservableProperty]
         private int selectedIndex = 0;
@@ -34,28 +34,41 @@ namespace Uniation.ViewModels.Pages
         private readonly NavigationService<MainPageViewModel> _mainNav;
         private readonly NavigationService<PaymentsMethodsViewModel> _popup;
         private readonly NavigationHelper _navigationHelper;
-        
+        private readonly ApiService _apiService;
+
+
         private string choosenRadioBtn;
 
        
         public DonationPageViewModel(NavigationService<MainPageViewModel> mainNav,ApiService apiService,NavigationService<PaymentsMethodsViewModel> popup,NavigationHelper navigationHelper)
         {
             _mainNav = mainNav;
-            Projects = apiService.projects;
             _popup = popup;
+            _apiService = apiService;
             _navigationHelper = navigationHelper;
             SetDefaultSettings();
         }
 
         private void SetDefaultSettings()
         {
-            Projects.Insert(0, new ProjectsData()
+            
+            Projects.Add(new ProjectsData()
             {
                 id = -1,
                 title = "Без проекта",
                 description = "",
                 image = ""
             });
+            foreach(var p in _apiService.projects)
+            {
+                Projects.Add(new ProjectsData()
+                {
+                    id = p.id,
+                    title = p.title,
+                    description = p.description,
+                    image = p.image
+                });
+            }
             Cancel();
         }
 

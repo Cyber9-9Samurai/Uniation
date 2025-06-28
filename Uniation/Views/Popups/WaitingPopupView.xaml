@@ -9,14 +9,14 @@
              d:DesignHeight="450" d:DesignWidth="800"
              d:DataContext="{d:DesignInstance popups:WaitingPopupViewModal}">
     <Grid>
-        <StackPanel Background="White" Width="500" Height="500">
-            <Image Source="/Resources/Images/ei_spinner.png" Width="300" Height="300" RenderTransformOrigin="0.5,0.5">
+        <Canvas Style="{StaticResource WaitingContainer}">
+            <Image Source="/Resources/Images/ei_spinner.png" Style="{StaticResource Waiting}">
                 <Image.RenderTransform>
                     <RotateTransform Angle="{Binding Angle}"/>
                 </Image.RenderTransform>
             </Image>
-            <TextBlock Text="Обработка пожертвования"/>
-            <TextBlock Text="Пожалуйста, подождите"/>
-        </StackPanel>
+            <TextBlock Style="{StaticResource WaitingInfo}" Text="Обработка пожертвования"/>
+            <TextBlock Style="{StaticResource WaitingDesc}" Text="Пожалуйста, подождите"/>
+        </Canvas>
     </Grid>
 </UserControl>

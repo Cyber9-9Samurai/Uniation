@@ -9,12 +9,18 @@
              d:DesignHeight="450" d:DesignWidth="800"
              d:DataContext="{d:DesignInstance pages:CardMethodPopupViewModel}">
     <Grid>
-        <StackPanel Height="300" Width="300" Background="White">
-            <Image/>
-            <TextBlock Text="Поднесите карту"/>
-            <TextBlock Text="Пожалуйста, приложите карту к терминалу для завершения пожертвования"/>
-            <TextBlock Text="{Binding Sum}"/>
-            <Button Content="Отмена" Style="{StaticResource PopupCancel}" Command="{Binding CancelCommand}" />
-        </StackPanel>
+        <Canvas Style="{StaticResource CardMethodsContainer}">
+            <Rectangle Style="{StaticResource CardMethod}">
+                <Rectangle.Fill>
+                    <ImageBrush ImageSource="/Resources/Images/CardMethod.png" Stretch="Fill"/>
+                </Rectangle.Fill>
+            </Rectangle>
+            <TextBlock Style="{StaticResource CardMethodInfo}" Text="Поднесите карту"/>
+            <TextBlock Style="{StaticResource CardMethodDesc}" Text="Пожалуйста, приложите карту к терминалу для завершения пожертвования"/>
+            <TextBlock Style="{StaticResource CardMethodSum1}">
+                    К оплате: <Run Text="{Binding Sum}" Style="{StaticResource CardMethodSum2}"/>
+            </TextBlock>
+            <Button Content="Отмена" Style="{StaticResource CardMethodPopupCancel}" Command="{Binding CancelCommand}"/>
+        </Canvas>
     </Grid>
 </UserControl>
