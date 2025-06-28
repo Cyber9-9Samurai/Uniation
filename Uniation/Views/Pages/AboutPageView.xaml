@@ -10,12 +10,17 @@
              d:DataContext="{d:DesignInstance pages:AboutPageViewModel}">
     <Grid>
         <Button Content="Назад" Style="{StaticResource ReturnButton}" Command="{Binding ReturnCommand}"/>
-        <StackPanel>
-            <Image Source="{Binding ImagePath}" Width="300" Height="300"/> 
-            <WrapPanel>
-                <Button Content="l" Command="{Binding SwipeCommand}" CommandParameter="-"/>
-                <Button Content="r" Command="{Binding SwipeCommand}" CommandParameter="+"/>
-            </WrapPanel>
-        </StackPanel>
+        <Image Source="/Resources/Images/AboutBG.png" Style="{StaticResource ProjCardBG}"/>
+        <Image Source="/Resources/Images/logo.png" Style="{StaticResource Logo2}"/>
+        <TextBlock Style="{StaticResource PageTitle}" Text="Об организации"/>
+        <Rectangle Style="{StaticResource Slider}">
+                <Rectangle.Fill>
+                    <ImageBrush ImageSource="{Binding ImagePath}" Stretch="Fill"/>
+                </Rectangle.Fill>
+        </Rectangle>
+        <WrapPanel Width="152" Height="64" Margin="0,0,0,-952">
+            <Button Style="{StaticResource SwipeButton1}" IsEnabled="{Binding IsRigthButtonEnabled}"  Command="{Binding SwipeCommand}" CommandParameter="-" />
+            <Button Style="{StaticResource SwipeButton2}" IsEnabled="{Binding IsLeftButtonEnabled}" Command="{Binding SwipeCommand}" CommandParameter="+"/>
+        </WrapPanel>
     </Grid>
 </UserControl>

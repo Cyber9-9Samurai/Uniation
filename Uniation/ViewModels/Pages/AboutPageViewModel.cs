@@ -17,6 +17,11 @@ namespace Uniation.ViewModels.Pages
         [ObservableProperty]
         private string imagePath = "/Resources/Images";
 
+        [ObservableProperty]
+        private bool isRigthButtonEnabled = false;
+        [ObservableProperty]
+        private bool isLeftButtonEnabled = true;
+
         private List<string> slides = new();
         private int index = 0;
         private readonly NavigationService<MainPageViewModel> _mainNav;
@@ -77,7 +82,22 @@ namespace Uniation.ViewModels.Pages
                     }
                     break;
             }
-            SetImage();
+            if(index == 0)
+            {
+                IsRigthButtonEnabled = false;
+                IsLeftButtonEnabled = true;
+            }
+            else if(index > 0 && index < slides.Count - 1)
+            {
+                IsRigthButtonEnabled = true;
+                IsLeftButtonEnabled = true;
+            }
+            else if(index == slides.Count - 1)
+            {
+                IsRigthButtonEnabled = true;
+                IsLeftButtonEnabled = false;
+            }
+                SetImage();
         }
 
         [RelayCommand]

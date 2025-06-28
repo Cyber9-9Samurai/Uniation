@@ -67,4 +67,9 @@
         <Setter Property="Image.RenderTransformOrigin" Value="0.5,0.5"/>
     </Style>
 
+    <Style x:Key="Slider">
+        <Setter Property="Control.Width" Value="1605"/>
+        <Setter Property="Control.Height" Value="693"/>
+        <Setter Property="Control.Margin" Value="-4,62,0,0"/>
+    </Style>
 </ResourceDictionary>

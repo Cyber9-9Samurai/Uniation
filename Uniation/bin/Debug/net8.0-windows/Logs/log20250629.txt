@@ -89,3 +89,80 @@
 2025-06-29 02:02:32.512 +04:00 [INF] Sending HTTP request GET http://api-sdr.itlabs.top/api/projects
 2025-06-29 02:02:32.779 +04:00 [INF] Received HTTP response headers after 265.3274ms - 200
 2025-06-29 02:02:32.781 +04:00 [INF] End processing HTTP request after 276.5413ms - 200
+2025-06-29 02:20:18.085 +04:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-06-29 02:20:18.109 +04:00 [INF] Hosting environment: Production
+2025-06-29 02:20:18.109 +04:00 [INF] Content root path: E:\MVS projects\Uniation\Uniation\bin\Debug\net8.0-windows
+2025-06-29 02:20:18.129 +04:00 [INF] Start processing HTTP request GET http://api-sdr.itlabs.top/api/projects
+2025-06-29 02:20:18.132 +04:00 [INF] Sending HTTP request GET http://api-sdr.itlabs.top/api/projects
+2025-06-29 02:20:18.383 +04:00 [INF] Received HTTP response headers after 249.1705ms - 200
+2025-06-29 02:20:18.385 +04:00 [INF] End processing HTTP request after 260.8673ms - 200
+2025-06-29 02:22:14.548 +04:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-06-29 02:22:14.573 +04:00 [INF] Hosting environment: Production
+2025-06-29 02:22:14.574 +04:00 [INF] Content root path: E:\MVS projects\Uniation\Uniation\bin\Debug\net8.0-windows
+2025-06-29 02:22:14.594 +04:00 [INF] Start processing HTTP request GET http://api-sdr.itlabs.top/api/projects
+2025-06-29 02:22:14.597 +04:00 [INF] Sending HTTP request GET http://api-sdr.itlabs.top/api/projects
+2025-06-29 02:22:14.843 +04:00 [INF] Received HTTP response headers after 243.8232ms - 200
+2025-06-29 02:22:14.845 +04:00 [INF] End processing HTTP request after 255.2174ms - 200
+2025-06-29 02:26:08.005 +04:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-06-29 02:26:08.028 +04:00 [INF] Hosting environment: Production
+2025-06-29 02:26:08.029 +04:00 [INF] Content root path: E:\MVS projects\Uniation\Uniation\bin\Debug\net8.0-windows
+2025-06-29 02:26:08.049 +04:00 [INF] Start processing HTTP request GET http://api-sdr.itlabs.top/api/projects
+2025-06-29 02:26:08.053 +04:00 [INF] Sending HTTP request GET http://api-sdr.itlabs.top/api/projects
+2025-06-29 02:26:08.303 +04:00 [INF] Received HTTP response headers after 248.6323ms - 200
+2025-06-29 02:26:08.305 +04:00 [INF] End processing HTTP request after 260.5674ms - 200
+2025-06-29 02:36:17.011 +04:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-06-29 02:36:17.035 +04:00 [INF] Hosting environment: Production
+2025-06-29 02:36:17.036 +04:00 [INF] Content root path: E:\MVS projects\Uniation\Uniation\bin\Debug\net8.0-windows
+2025-06-29 02:36:17.060 +04:00 [INF] Start processing HTTP request GET http://api-sdr.itlabs.top/api/projects
+2025-06-29 02:36:17.064 +04:00 [INF] Sending HTTP request GET http://api-sdr.itlabs.top/api/projects
+2025-06-29 02:36:17.313 +04:00 [INF] Received HTTP response headers after 247.1634ms - 200
+2025-06-29 02:36:17.314 +04:00 [INF] End processing HTTP request after 259.1418ms - 200
+2025-06-29 02:37:58.749 +04:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-06-29 02:37:58.774 +04:00 [INF] Hosting environment: Production
+2025-06-29 02:37:58.774 +04:00 [INF] Content root path: E:\MVS projects\Uniation\Uniation\bin\Debug\net8.0-windows
+2025-06-29 02:37:58.795 +04:00 [INF] Start processing HTTP request GET http://api-sdr.itlabs.top/api/projects
+2025-06-29 02:37:58.798 +04:00 [INF] Sending HTTP request GET http://api-sdr.itlabs.top/api/projects
+2025-06-29 02:37:59.050 +04:00 [INF] Received HTTP response headers after 250.2077ms - 200
+2025-06-29 02:37:59.052 +04:00 [INF] End processing HTTP request after 262.0034ms - 200
+2025-06-29 02:45:32.603 +04:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-06-29 02:45:32.626 +04:00 [INF] Hosting environment: Production
+2025-06-29 02:45:32.626 +04:00 [INF] Content root path: E:\MVS projects\Uniation\Uniation\bin\Debug\net8.0-windows
+2025-06-29 02:45:32.648 +04:00 [INF] Start processing HTTP request GET http://api-sdr.itlabs.top/api/projects
+2025-06-29 02:45:32.651 +04:00 [INF] Sending HTTP request GET http://api-sdr.itlabs.top/api/projects
+2025-06-29 02:45:32.893 +04:00 [INF] Received HTTP response headers after 239.6482ms - 200
+2025-06-29 02:45:32.894 +04:00 [INF] End processing HTTP request after 251.0474ms - 200
+2025-06-29 02:46:31.300 +04:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-06-29 02:46:31.325 +04:00 [INF] Hosting environment: Production
+2025-06-29 02:46:31.325 +04:00 [INF] Content root path: E:\MVS projects\Uniation\Uniation\bin\Debug\net8.0-windows
+2025-06-29 02:46:31.348 +04:00 [INF] Start processing HTTP request GET http://api-sdr.itlabs.top/api/projects
+2025-06-29 02:46:31.350 +04:00 [INF] Sending HTTP request GET http://api-sdr.itlabs.top/api/projects
+2025-06-29 02:46:31.590 +04:00 [INF] Received HTTP response headers after 237.5845ms - 200
+2025-06-29 02:46:31.592 +04:00 [INF] End processing HTTP request after 249.0908ms - 200
+2025-06-29 02:51:22.289 +04:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-06-29 02:51:22.312 +04:00 [INF] Hosting environment: Production
+2025-06-29 02:51:22.313 +04:00 [INF] Content root path: E:\MVS projects\Uniation\Uniation\bin\Debug\net8.0-windows
+2025-06-29 02:51:22.334 +04:00 [INF] Start processing HTTP request GET http://api-sdr.itlabs.top/api/projects
+2025-06-29 02:51:22.336 +04:00 [INF] Sending HTTP request GET http://api-sdr.itlabs.top/api/projects
+2025-06-29 02:51:22.577 +04:00 [INF] Received HTTP response headers after 239.1301ms - 200
+2025-06-29 02:51:22.579 +04:00 [INF] End processing HTTP request after 250.2103ms - 200
+2025-06-29 03:09:25.695 +04:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-06-29 03:09:25.720 +04:00 [INF] Hosting environment: Production
+2025-06-29 03:09:25.720 +04:00 [INF] Content root path: E:\MVS projects\Uniation\Uniation\bin\Debug\net8.0-windows
+2025-06-29 03:09:25.742 +04:00 [INF] Start processing HTTP request GET http://api-sdr.itlabs.top/api/projects
+2025-06-29 03:09:25.745 +04:00 [INF] Sending HTTP request GET http://api-sdr.itlabs.top/api/projects
+2025-06-29 03:09:25.995 +04:00 [INF] Received HTTP response headers after 248.6576ms - 200
+2025-06-29 03:09:25.997 +04:00 [INF] End processing HTTP request after 260.6338ms - 200
+2025-06-29 03:10:55.376 +04:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-06-29 03:10:55.402 +04:00 [INF] Hosting environment: Production
+2025-06-29 03:10:55.402 +04:00 [INF] Content root path: E:\MVS projects\Uniation\Uniation\bin\Debug\net8.0-windows
+2025-06-29 03:10:55.424 +04:00 [INF] Start processing HTTP request GET http://api-sdr.itlabs.top/api/projects
+2025-06-29 03:10:55.427 +04:00 [INF] Sending HTTP request GET http://api-sdr.itlabs.top/api/projects
+2025-06-29 03:10:55.671 +04:00 [INF] Received HTTP response headers after 242.5121ms - 200
+2025-06-29 03:10:55.673 +04:00 [INF] End processing HTTP request after 254.0532ms - 200
+2025-06-29 03:13:00.838 +04:00 [INF] Application started. Press Ctrl+C to shut down.
+2025-06-29 03:13:00.861 +04:00 [INF] Hosting environment: Production
+2025-06-29 03:13:00.862 +04:00 [INF] Content root path: E:\MVS projects\Uniation\Uniation\bin\Debug\net8.0-windows
+2025-06-29 03:13:00.882 +04:00 [INF] Start processing HTTP request GET http://api-sdr.itlabs.top/api/projects
+2025-06-29 03:13:00.885 +04:00 [INF] Sending HTTP request GET http://api-sdr.itlabs.top/api/projects
+2025-06-29 03:13:01.132 +04:00 [INF] Received HTTP response headers after 245.2681ms - 200
+2025-06-29 03:13:01.134 +04:00 [INF] End processing HTTP request after 256.1552ms - 200

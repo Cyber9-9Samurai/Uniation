@@ -14,7 +14,7 @@
         <Image Source="/Resources/Images/MainPageBack.png" Style="{StaticResource Mainback}"/>
         <Image Source="/Resources/Images/logo.png" Style="{StaticResource Logo}"/>
         <StackPanel Style="{StaticResource MainPageGreeting}">
-            <TextBlock Style="{StaticResource GreatingHeader}" Text="В течение 10 лет мы помогаем людям замечать проблемы тех, кто рядом, и уметь протянуть руку помощи в нужный момент"/>
+            <TextBlock Style="{StaticResource GreatingHeader}" ><Run Foreground="#E31E24">В течение 10 лет</Run> мы помогаем людям замечать проблемы тех, кто рядом, и уметь протянуть руку помощи в нужный момент</TextBlock>
             <StackPanel Style="{StaticResource GreetingRow}">
                 <TextBlock Style="{StaticResource GreatingTitle}" Text="Кто мы?"/>
                 <TextBlock Style="{StaticResource GreatingText}" Text="Мы неравнодушные люди Забайкалья, объединенные в одну добрую команду, помогающую помогать"/>

@@ -14,11 +14,14 @@
     <None Remove="Resources\Images\3Slide.png" />
     <None Remove="Resources\Images\4Slide.png" />
     <None Remove="Resources\Images\5Slide.png" />
+    <None Remove="Resources\Images\AboutBG.png" />
     <None Remove="Resources\Images\BlueHighlight.png" />
     <None Remove="Resources\Images\CardMethod.png" />
     <None Remove="Resources\Images\ei_spinner.png" />
     <None Remove="Resources\Images\FivesSlide.png" />
     <None Remove="Resources\Images\FourthSlide.png" />
+    <None Remove="Resources\Images\Larrow.png" />
+    <None Remove="Resources\Images\LarrowInactive.png" />
     <None Remove="Resources\Images\logo.png" />
     <None Remove="Resources\Images\MainPageBack.png" />
     <None Remove="Resources\Images\OurProj1.png" />
@@ -26,6 +29,8 @@
     <None Remove="Resources\Images\PaymentMethod.png" />
     <None Remove="Resources\Images\ProjectCardBG.png" />
     <None Remove="Resources\Images\QRMethod.png" />
+    <None Remove="Resources\Images\Rarrow.png" />
+    <None Remove="Resources\Images\RarrowInactive.png" />
     <None Remove="Resources\Images\RedHighlight.png" />
     <None Remove="Resources\Images\SecondSlide.png" />
     <None Remove="Resources\Images\Success.png" />
@@ -71,9 +76,12 @@
     <Resource Include="Resources\Images\3Slide.png" />
     <Resource Include="Resources\Images\4Slide.png" />
     <Resource Include="Resources\Images\5Slide.png" />
+    <Resource Include="Resources\Images\AboutBG.png" />
     <Resource Include="Resources\Images\BlueHighlight.png" />
     <Resource Include="Resources\Images\CardMethod.png" />
     <Resource Include="Resources\Images\ei_spinner.png" />
+    <Resource Include="Resources\Images\Larrow.png" />
+    <Resource Include="Resources\Images\LarrowInactive.png" />
     <Resource Include="Resources\Images\logo.png" />
     <Resource Include="Resources\Images\MainPageBack.png" />
     <Resource Include="Resources\Images\OurProj1.png" />
@@ -81,6 +89,8 @@
     <Resource Include="Resources\Images\PaymentMethod.png" />
     <Resource Include="Resources\Images\ProjectCardBG.png" />
     <Resource Include="Resources\Images\QRMethod.png" />
+    <Resource Include="Resources\Images\Rarrow.png" />
+    <Resource Include="Resources\Images\RarrowInactive.png" />
     <Resource Include="Resources\Images\RedHighlight.png" />
     <Resource Include="Resources\Images\Success.png" />
   </ItemGroup>

@@ -172,4 +172,66 @@
         <Setter Property="Canvas.Top" Value="307.5"/>
         <Setter Property="Canvas.Left" Value="825"/>
     </Style>
+
+    <Style x:Key="SwipeButton1">
+        <Setter Property="Button.Width" Value="64"/>
+        <Setter Property="Button.Height" Value="64"/>
+        <Setter Property="Button.Margin" Value="0,0,0,0"/>
+        <Setter Property="Button.Template">
+            <Setter.Value>
+                <ControlTemplate>
+                    <Ellipse x:Name="Elipse" Width="{TemplateBinding Width}" Height="{TemplateBinding Height}">
+                        <Ellipse.Fill>
+                            <ImageBrush ImageSource="/Resources/Images/Rarrow.png" Stretch="Fill"/>
+                        </Ellipse.Fill>
+                    </Ellipse>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsEnabled" Value="True">
+                            <Setter TargetName="Elipse" Property="Fill">
+                                <Setter.Value>
+                                    <ImageBrush ImageSource="/Resources/Images/Rarrow.png" Stretch="Fill"/>
+                                </Setter.Value>
+                            </Setter>
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="False">
+                            <Setter TargetName="Elipse" Property="Fill">
+                                <Setter.Value>
+                                    <ImageBrush ImageSource="/Resources/Images/RarrowInactive.png" Stretch="Fill"/>
+                                </Setter.Value>
+                            </Setter>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style x:Key="SwipeButton2" BasedOn="{StaticResource SwipeButton1}">
+        <Setter Property="Button.Template">
+            <Setter.Value>
+                <ControlTemplate>
+                    <Ellipse x:Name="Elipse" Width="{TemplateBinding Width}" Height="{TemplateBinding Height}">
+                        <Ellipse.Fill>
+                            <ImageBrush ImageSource="/Resources/Images/Larrow.png" Stretch="Fill"/>
+                        </Ellipse.Fill>
+                    </Ellipse>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsEnabled" Value="True">
+                            <Setter TargetName="Elipse" Property="Fill">
+                                <Setter.Value>
+                                    <ImageBrush ImageSource="/Resources/Images/Larrow.png" Stretch="Fill"/>
+                                </Setter.Value>
+                            </Setter>
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="False">
+                            <Setter TargetName="Elipse" Property="Fill">
+                                <Setter.Value>
+                                    <ImageBrush ImageSource="/Resources/Images/LarrowInactive.png" Stretch="Fill"/>
+                                </Setter.Value>
+                            </Setter>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
 </ResourceDictionary>
