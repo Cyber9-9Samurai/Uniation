@@ -2,6 +2,11 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
     <FontFamily x:Key="Inter" >pack://application,,,/Resources/Fonts/#Inter</FontFamily>
     <FontFamily x:Key="Rubik" >pack://application,,,/Resources/Fonts/#Rubik</FontFamily>
+    <FontFamily x:Key="din-regular">pack://application,,,/Resources/Fonts/dinpro_black.otf</FontFamily>
+    <FontFamily x:Key="din-meduim">pack://application,,,/Resources/Fonts/dinpro_medium.otf</FontFamily>
+    <FontFamily x:Key="din-light">pack://application,,,/Resources/Fonts/dinpro_light.otf</FontFamily>
+    <FontFamily x:Key="din-bold">pack://application,,,/Resources/Fonts/dinpro_bold.otf</FontFamily>
+    <FontFamily x:Key="open-sans">pack://application,,,/Resources/Fonts/OpenSans.ttf</FontFamily>
     <Style TargetType="TextBlock" x:Key="BaseTextStyle">
         <Setter Property="Foreground" Value="{StaticResource TextBrush}"/>
         <Setter Property="TextWrapping" Value="Wrap"/>
@@ -13,5 +18,223 @@
 
     <Style TargetType="TextBlock" BasedOn="{StaticResource BaseTextStyle}" x:Key="RubikText">
         <Setter Property="FontFamily" Value="{StaticResource Rubik}"/>
+    </Style>
+
+    <Style x:Key="GreatingHeader">
+        <Setter Property="TextBlock.Height" Value="190"/>
+        <Setter Property="TextBlock.FontFamily" Value="{StaticResource din-bold}"/>
+        <Setter Property="TextBlock.TextAlignment" Value="Center"/>
+        <Setter Property="TextBlock.FontSize" Value="54"/>
+        <Setter Property="TextBlock.TextWrapping" Value="Wrap"/>
+    </Style>
+
+    <Style x:Key="GreatingTitle">
+        <Setter Property="TextBlock.Height" Value="50"/>
+        <Setter Property="TextBlock.Width" Value="258"/>
+        <Setter Property="TextBlock.FontFamily" Value="{StaticResource din-bold}"/>
+        <Setter Property="TextBlock.TextAlignment" Value="Center"/>
+        <Setter Property="TextBlock.FontSize" Value="40"/>
+        <Setter Property="TextBlock.Foreground" Value="#FFFFFF"/>
+        <Setter Property="TextBlock.Background">
+            <Setter.Value>
+                <ImageBrush ImageSource="/Resources/Images/BlueHighlight.png" Stretch="Fill"/>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style x:Key="GreatingText">
+        <Setter Property="TextBlock.Height" Value="70"/>
+        <Setter Property="TextBlock.Width" Value="840"/>
+        <Setter Property="TextBlock.FontFamily" Value="{StaticResource din-regular}"/>
+        <Setter Property="TextBlock.TextAlignment" Value="Center"/>
+        <Setter Property="TextBlock.FontSize" Value="28"/>
+        <Setter Property="TextBlock.Margin" Value="0,8,0,0"/>
+        <Setter Property="TextBlock.TextWrapping" Value="Wrap"/>
+    </Style>
+
+    <Style x:Key="GreatingTitle2" BasedOn="{StaticResource GreatingTitle}">
+        <Setter Property="TextBlock.Width" Value="322"/>
+        <Setter Property="TextBlock.Background" >
+            <Setter.Value>
+                <ImageBrush ImageSource="/Resources/Images/RedHighlight.png" Stretch="Fill"/>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style x:Key="GreatingText2" BasedOn="{StaticResource GreatingText}">
+        <Setter Property="TextBlock.Height" Value="105"/>
+        <Setter Property="TextBlock.Width" Value="907"/>
+    </Style>
+
+    <Style x:Key="CardTitle" BasedOn="{StaticResource GreatingTitle}">
+        <Setter Property="TextBlock.Height" Value="62"/>
+        <Setter Property="TextBlock.Width" Value="408"/>
+        <Setter Property="TextBlock.FontSize" Value="28"/>
+        <Setter Property="TextBlock.Margin" Value="0,31,0,0"/>
+        <Setter Property="TextBlock.Background" Value="Transparent" />
+        <Setter Property="TextBlock.TextWrapping" Value="Wrap"/>
+    </Style>
+
+    <Style x:Key="CardText" BasedOn="{StaticResource GreatingText}">
+        <Setter Property="TextBlock.Height" Value="132"/>
+        <Setter Property="TextBlock.Width" Value="408"/>
+        <Setter Property="TextBlock.TextAlignment" Value="Justify"/>
+        <Setter Property="TextBlock.FontSize" Value="18"/>
+        <Setter Property="TextBlock.Margin" Value="0,16,0,0"/>
+        <Setter Property="TextBlock.Foreground" Value="#FFFFFF"/>
+    </Style>
+
+    <Style x:Key="PageTitle" BasedOn="{StaticResource CardTitle}">
+        <Setter Property="TextBlock.Height" Value="65"/>
+        <Setter Property="TextBlock.Width" Value="1000"/>
+        <Setter Property="TextBlock.FontSize" Value="54"/>
+        <Setter Property="TextBlock.Margin" Value="0,-843,0,0"/>
+        <Setter Property="TextBlock.Foreground" Value="#1E1E1E"/>
+    </Style>
+
+    <Style x:Key="ProjInfoDesc" BasedOn="{StaticResource GreatingText}">
+        <Setter Property="TextBlock.Height" Value="1600"/>
+        <Setter Property="TextBlock.Width" Value="773"/>
+        <Setter Property="TextBlock.TextAlignment" Value="Left"/>
+        <Setter Property="TextBlock.Margin" Value="0,0,0,0"/>
+    </Style>
+
+    <Style x:Key="DonationProjectChoose" BasedOn="{StaticResource GreatingHeader}">
+        <Setter Property="TextBlock.Height" Value="59"/>
+        <Setter Property="TextBlock.Width" Value="803"/>
+        <Setter Property="TextBlock.TextAlignment" Value="Left"/>
+        <Setter Property="Canvas.Top" Value="80"/>
+        <Setter Property="Canvas.Left" Value="50"/>
+    </Style>
+
+    <Style x:Key="ChooseSum" BasedOn="{StaticResource DonationProjectChoose}">
+        <Setter Property="TextBlock.Height" Value="65"/>
+       <Setter Property="Canvas.Top" Value="342"/>
+        <Setter Property="Canvas.Left" Value="50"/>
+    </Style>
+
+    <Style x:Key="PlaceholderText" BasedOn="{StaticResource ProjInfoDesc}">
+        <Setter Property="TextBlock.Height" Value="43"/>
+        <Setter Property="TextBlock.Width" Value="200"/>
+        <Setter Property="TextBlock.FontSize" Value="35"/>
+        <Setter Property="Canvas.Top" Value="566"/>
+        <Setter Property="Canvas.Left" Value="82"/>
+        <Setter Property="TextBlock.Foreground" Value="#707070"/>
+    </Style>
+
+    <Style x:Key="WarningText" BasedOn="{StaticResource ProjInfoDesc}">
+        <Setter Property="TextBlock.Height" Value="31"/>
+        <Setter Property="TextBlock.Width" Value="803"/>
+        <Setter Property="TextBlock.FontSize" Value="25"/>
+        <Setter Property="Canvas.Top" Value="665"/>
+        <Setter Property="Canvas.Left" Value="50"/>
+    </Style>
+
+    <Style x:Key="SumDisplay">
+        <Setter Property="TextBox.Height" Value="107"/>
+        <Setter Property="TextBox.Width" Value="803"/>
+        <Setter Property="TextBox.FontFamily" Value="{StaticResource din-regular}"/>
+        <Setter Property="TextBox.FontSize" Value="25"/>
+        <Setter Property="Canvas.Top" Value="534"/>
+        <Setter Property="Canvas.Left" Value="50"/>
+        <Setter Property="TextBox.Foreground" Value="#1E1E1E"/>
+        <Setter Property="TextBox.Padding" Value="32,32,32,32"/>
+        <Setter Property="TextBox.BorderThickness" Value="1"/>
+        <Setter Property="TextBox.BorderBrush" Value="#707070"/>
+        <Setter Property="TextBox.IsReadOnly" Value="True"/>
+        <Setter Property="TextBox.Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="TextBox">
+                    <Border x:Name="border" BorderThickness="{TemplateBinding BorderThickness}" BorderBrush="{TemplateBinding BorderBrush}"  CornerRadius="20">
+                        <ScrollViewer x:Name="PART_ContentHost" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="PaymentsMethodInfo" BasedOn="{StaticResource GreatingTitle}">
+        <Setter Property="TextBlock.Height" Value="118"/>
+        <Setter Property="TextBlock.Width" Value="631"/>
+        <Setter Property="TextBlock.FontSize" Value="54"/>
+        <Setter Property="TextBlock.Foreground" Value="#1E1E1E"/>
+        <Setter Property="TextBlock.Background" Value="Transparent"/>
+        <Setter Property="TextBlock.TextWrapping" Value="Wrap"/>
+        <Setter Property="Canvas.Top" Value="303"/>
+        <Setter Property="Canvas.Left" Value="128"/>
+    </Style>
+
+    <Style x:Key="PaymentsMethodSum" BasedOn="{StaticResource PaymentsMethodInfo}">
+        <Setter Property="TextBlock.FontSize" Value="72"/>
+        <Setter Property="TextBlock.Height" Value="135"/>
+        <Setter Property="Canvas.Top" Value="485"/>
+    </Style>
+
+    <Style x:Key="CardMethodInfo" BasedOn="{StaticResource PaymentsMethodInfo}">
+        <Setter Property="TextBlock.Height" Value="59"/>
+        <Setter Property="TextBlock.Width" Value="591"/>
+        <Setter Property="Canvas.Top" Value="287"/>
+    </Style>
+
+    <Style x:Key="CardMethodDesc" BasedOn="{StaticResource PaymentsMethodInfo}">
+        <Setter Property="TextBlock.Height" Value="72"/>
+        <Setter Property="TextBlock.Width" Value="650"/>
+        <Setter Property="TextBlock.FontFamily" Value="{StaticResource din-regular}"/>
+        <Setter Property="TextBlock.FontSize" Value="30"/>
+        <Setter Property="Canvas.Top" Value="370"/>
+        <Setter Property="Canvas.Left" Value="100"/>
+    </Style>
+
+    <Style x:Key="CardMethodSum1" BasedOn="{StaticResource PaymentsMethodSum}">
+        <Setter Property="TextBlock.FontSize" Value="50"/>
+        <Setter Property="TextBlock.Height" Value="79"/>
+        <Setter Property="TextBlock.Width" Value="420"/>
+        <Setter Property="Canvas.Top" Value="106.5"/>
+        <Setter Property="Canvas.Left" Value="996"/>
+    </Style>
+    <Style x:Key="CardMethodSum2">
+        <Setter Property="TextBlock.FontSize" Value="55"/>
+        <Setter Property="TextBlock.FontFamily" Value="{StaticResource din-bold}"/>
+    </Style>
+
+    <Style x:Key="QRMethodInfo" BasedOn="{StaticResource PaymentsMethodInfo}">
+        <Setter Property="TextBlock.Height" Value="200"/>
+        <Setter Property="TextBlock.Width" Value="470"/>
+        <Setter Property="Canvas.Top" Value="303"/>
+        <Setter Property="TextBlock.TextWrapping" Value="Wrap"/>
+        <Setter Property="TextBlock.TextAlignment" Value="Center"/>
+    </Style>
+    <Style x:Key="QRMethodDesc" BasedOn="{StaticResource CardMethodDesc}">
+        <Setter Property="TextBlock.Width" Value="480"/>
+        <Setter Property="Canvas.Top" Value="514"/>
+        <Setter Property="Canvas.Left" Value="118"/>
+    </Style>
+
+    <Style x:Key="QRMethodSum" BasedOn="{StaticResource CardMethodSum1}">
+        <Setter Property="Canvas.Top" Value="106.5"/>
+        <Setter Property="Canvas.Left" Value="875"/>
+    </Style>
+
+    <Style x:Key="WaitingInfo" BasedOn="{StaticResource PaymentsMethodInfo}">
+        <Setter Property="TextBlock.Height" Value="59"/>
+        <Setter Property="TextBlock.Width" Value="792"/>
+        <Setter Property="Canvas.Left" Value="64"/>
+    </Style>
+
+    <Style x:Key="WaitingDesc" BasedOn="{StaticResource CardMethodDesc}">
+        <Setter Property="TextBlock.Width" Value="350"/>
+        <Setter Property="Canvas.Top" Value="386"/>
+        <Setter Property="Canvas.Left" Value="273.5"/>
+    </Style>
+
+    <Style x:Key="SucInfo" BasedOn="{StaticResource PaymentsMethodInfo}">
+        <Setter Property="TextBlock.Height" Value="125"/>
+        <Setter Property="TextBlock.Width" Value="524"/>
+        <Setter Property="Canvas.Left" Value="198"/>
+        <Setter Property="TextBlock.TextWrapping" Value="Wrap"/>
+    </Style>
+
+    <Style x:Key="SecDesc" BasedOn="{StaticResource CardMethodDesc}">
+        <Setter Property="TextBlock.Width" Value="365"/>
+        <Setter Property="Canvas.Top" Value="445"/>
+        <Setter Property="Canvas.Left" Value="271"/>
     </Style>
 </ResourceDictionary>

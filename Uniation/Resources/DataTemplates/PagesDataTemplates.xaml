@@ -5,4 +5,20 @@
     <DataTemplate DataType="{x:Type pages:MainPageViewModel}">
         <pages1:MainView DataContext="{Binding}"/>
     </DataTemplate>
+
+    <DataTemplate DataType="{x:Type pages:ProjectsPageViewModel}">
+        <pages1:ProjectsView DataContext="{Binding}"/>
+    </DataTemplate>
+
+    <DataTemplate DataType="{x:Type pages:ProjectCardViewModel}">
+        <pages1:ProjectCartView DataContext="{Binding}"/>
+    </DataTemplate>
+
+    <DataTemplate DataType="{x:Type pages:DonationPageViewModel}">
+        <pages1:DonationView DataContext="{Binding}"/>
+    </DataTemplate>
+
+    <DataTemplate DataType="{x:Type pages:AboutPageViewModel}">
+        <pages1:AboutPageView DataContext="{Binding}"/>
+    </DataTemplate>
 </ResourceDictionary>

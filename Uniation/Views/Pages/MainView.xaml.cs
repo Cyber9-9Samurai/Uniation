@@ -1,4 +1,5 @@
 ﻿using System.Windows.Controls;
+using Uniation.ViewModels.Pages;
 
 namespace Uniation.Views.Pages
 {
@@ -10,6 +11,9 @@ namespace Uniation.Views.Pages
         public MainView()
         {
             InitializeComponent();
+            
         }
+
+        
     }
 }

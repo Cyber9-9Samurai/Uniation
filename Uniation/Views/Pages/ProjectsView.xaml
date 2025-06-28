@@ -1,0 +1,58 @@
+﻿<UserControl x:Class="Uniation.Views.Pages.ProjectsView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Uniation.Views.Pages"
+             xmlns:pages="clr-namespace:Uniation.ViewModels.Pages"
+             xmlns:b="http://schemas.microsoft.com/xaml/behaviors"
+             xmlns:converter ="clr-namespace:Uniation.Converters"
+             mc:Ignorable="d" 
+             d:DesignHeight="1080" d:DesignWidth="1920"
+             d:DataContext="{d:DesignInstance pages:ProjectsPageViewModel}">
+    <UserControl.Resources>
+        <converter:ColorConverter x:Key="ColorConverter"/>
+        <converter:BorderColorConverter x:Key="BorderColorConverter"/>
+    </UserControl.Resources>
+    <Grid>
+        
+        <Button Content="Назад" Style="{StaticResource ReturnButton}" Command="{Binding ReturnCommand}"/>
+        <TextBlock Style="{StaticResource PageTitle}" Text="Наши проекты"/>
+        <Image Style="{StaticResource Logo2}" Source="/Resources/Images/logo.png" />
+        <Image Style="{StaticResource ProjBack1}" Source="/Resources/Images/OurProj1.png"/>
+        <Image Style="{StaticResource ProjBack2}" Source="/Resources/Images/OurProj2.png"/>
+        <ScrollViewer Style="{StaticResource ProjectCards}">
+            <ItemsControl ItemsSource="{Binding Projects}">
+                <ItemsControl.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <WrapPanel />
+                    </ItemsPanelTemplate>
+                </ItemsControl.ItemsPanel>
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <Border BorderThickness="1" CornerRadius="24" BorderBrush="{Binding id,Converter={StaticResource BorderColorConverter}}" Width="458" Height="516" Margin="0,0,8,8">
+                            <StackPanel Background="{Binding id,Converter={StaticResource ColorConverter}}">
+                                <StackPanel.Clip>
+                                    <RectangleGeometry Rect="0,0,456,514" RadiusX="24" RadiusY="24"/>
+                                </StackPanel.Clip>
+                                <b:Interaction.Triggers>
+                                    <b:EventTrigger EventName="MouseDown">
+                                        <b:InvokeCommandAction Command="{Binding DataContext.OpenInfoCommand, RelativeSource={RelativeSource AncestorType={x:Type UserControl}}}" CommandParameter="{Binding id}"/>
+                                    </b:EventTrigger>
+                                </b:Interaction.Triggers>
+                                <Rectangle Style="{StaticResource CardImage}" RadiusX="8" RadiusY="8">
+                                    <Rectangle.Fill>
+                                        <ImageBrush ImageSource="{Binding image}"/>
+                                    </Rectangle.Fill>
+                                </Rectangle>
+                                <TextBlock Style="{StaticResource CardTitle}" Text="{Binding title}"/>
+                                <TextBlock Style="{StaticResource CardText}" Text="{Binding description}"/>
+                            </StackPanel>
+                        </Border>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
+        </ScrollViewer>
+
+    </Grid>
+</UserControl>

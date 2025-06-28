@@ -7,8 +7,29 @@
              xmlns:components="clr-namespace:MainComponents.Components;assembly=MainComponents"
              xmlns:pages="clr-namespace:Uniation.ViewModels.Pages"
              mc:Ignorable="d"
-             d:DesignHeight="450" d:DesignWidth="800"
+             d:DesignHeight="1080" d:DesignWidth="1920"
              d:DataContext="{d:DesignInstance pages:MainPageViewModel}"
              x:Name="MainPage">
-
+    <Grid>
+        <Image Source="/Resources/Images/MainPageBack.png" Style="{StaticResource Mainback}"/>
+        <Image Source="/Resources/Images/logo.png" Style="{StaticResource Logo}"/>
+        <StackPanel Style="{StaticResource MainPageGreeting}">
+            <TextBlock Style="{StaticResource GreatingHeader}" ><Run Foreground="#E31E24">В течение 10 лет</Run> мы помогаем людям замечать проблемы тех, кто рядом, и уметь протянуть руку помощи в нужный момент</TextBlock>
+            <StackPanel Style="{StaticResource GreetingRow}">
+                <TextBlock Style="{StaticResource GreatingTitle}" Text="Кто мы?"/>
+                <TextBlock Style="{StaticResource GreatingText}" Text="Мы неравнодушные люди Забайкалья, объединенные в одну добрую команду, помогающую помогать"/>
+            </StackPanel>
+            <StackPanel Style="{StaticResource GreetingRow}">
+                <TextBlock Style="{StaticResource GreatingTitle2}" Text="Что делаем?"/>
+                <TextBlock Style="{StaticResource GreatingText2}" Text="Помогаем тем, кто нуждается в нашей помощи (семьям и пожилым в трудной жизненной ситуации, сиротам, выпускникам детских домов, отказникам, приемным семьям)"/>
+            </StackPanel>
+            <StackPanel Style="{StaticResource GreetingRow}">
+                <WrapPanel>
+                    <Button Margin="130,0,26,0" Style="{StaticResource BlueMainMenuButton}" Command="{Binding ToProjectsCommand}" >Наши проекты</Button>
+                    <Button Style="{StaticResource BlueMainMenuButton}" Command="{Binding ToAboutCommand}">Об организации</Button>
+                </WrapPanel>
+                <Button Style="{StaticResource RedMainMenuButton}" Command="{Binding ToDonatioonsCommand}">Пожертвовать</Button>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
 </UserControl>

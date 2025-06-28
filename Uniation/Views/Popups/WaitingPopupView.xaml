@@ -1,0 +1,22 @@
+﻿<UserControl x:Class="Uniation.Views.Popups.WaitingPopupView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Uniation.Views.Popups"
+             xmlns:popups="clr-namespace:Uniation.ViewModels.Popups"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800"
+             d:DataContext="{d:DesignInstance popups:WaitingPopupViewModal}">
+    <Grid>
+        <Canvas Style="{StaticResource WaitingContainer}">
+            <Image Source="/Resources/Images/ei_spinner.png" Style="{StaticResource Waiting}">
+                <Image.RenderTransform>
+                    <RotateTransform Angle="{Binding Angle}"/>
+                </Image.RenderTransform>
+            </Image>
+            <TextBlock Style="{StaticResource WaitingInfo}" Text="Обработка пожертвования"/>
+            <TextBlock Style="{StaticResource WaitingDesc}" Text="Пожалуйста, подождите"/>
+        </Canvas>
+    </Grid>
+</UserControl>

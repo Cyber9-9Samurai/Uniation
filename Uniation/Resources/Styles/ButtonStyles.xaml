@@ -18,4 +18,220 @@
             </Setter.Value>
         </Setter>
     </Style>
+    
+    <Style x:Key="BlueMainMenuButton">
+        <Setter Property="Button.Width" Value="411.5"/>
+        <Setter Property="Button.Height" Value="120"/>
+        <Setter Property="Button.FontFamily" Value="{StaticResource din-meduim}"/>
+        <Setter Property="Button.FontSize" Value="40"/>
+        <Setter Property="Button.Background" Value="#2683F1"/>
+        <Setter Property="Button.Foreground" Value="#FFFFFF"/>
+        <Setter Property="Button.BorderThickness" Value="0"/>
+        <Setter Property="Button.Margin" Value="0 0 26 0"/>
+        <Setter Property="Button.Template">
+            <Setter.Value >
+                <ControlTemplate TargetType="Button">
+                    <Border x:Name="border" Background="{TemplateBinding Background}" BorderThickness="{TemplateBinding BorderThickness }" BorderBrush="{TemplateBinding BorderBrush}" CornerRadius="16">
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="RedMainMenuButton" BasedOn="{StaticResource BlueMainMenuButton}">
+        <Setter Property="Control.Width" Value="849"/>
+        <Setter Property="Control.Height" Value="120"/>
+        <Setter Property="Button.Background" Value="#E31E24"/>
+        <Setter Property="Button.Margin" Value="0 26 0 0"/>
+    </Style>
+
+    <Style x:Key="ReturnButton" BasedOn="{StaticResource BlueMainMenuButton}">
+        <Setter Property="Button.Width" Value="212"/>
+        <Setter Property="Button.Height" Value="80"/>
+        <Setter Property="Button.FontSize" Value="32"/>
+        <Setter Property="Button.Background" Value="#FFFFFF"/>
+        <Setter Property="Button.Foreground" Value="#E31E24"/>
+        <Setter Property="Button.BorderThickness" Value="2"/>
+        <Setter Property="Button.Margin" Value="-1548,-846,0,0"/>
+        <Setter Property="Button.BorderBrush">
+            <Setter.Value>
+                <SolidColorBrush Color="#E31E24"/>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="DonationCancel" BasedOn="{StaticResource ReturnButton}">
+        <Setter Property="Button.Width" Value="388.5"/>
+        <Setter Property="Button.Height" Value="120"/>
+        <Setter Property="Button.FontSize" Value="40"/>
+        <Setter Property="Button.Background" Value="#FFFFFF"/>
+        <Setter Property="Button.Foreground" Value="#E31E24"/>
+        <Setter Property="Button.BorderThickness" Value="2"/>
+        <Setter Property="Button.Margin" Value="0,0,0,0"/>
+    </Style>
+
+    <Style x:Key="DonationAcc" BasedOn="{StaticResource RedMainMenuButton}">
+        <Setter Property="Button.Width" Value="388.5"/>
+        <Setter Property="Button.Height" Value="120"/>
+        <Setter Property="Button.Margin" Value="26,0,0,0"/>
+    </Style>
+
+    <Style x:Key="PopupLink" BasedOn="{StaticResource RedMainMenuButton}">
+        <Setter Property="Button.Width" Value="762"/>
+        <Setter Property="Button.Height" Value="120"/>
+        <Setter Property="Button.Margin" Value="0,0,0,26"/>
+    </Style>
+    <Style x:Key="PopupCancel" BasedOn="{StaticResource DonationCancel}">
+        <Setter Property="Button.Width" Value="762"/>
+        <Setter Property="Button.Height" Value="120"/>
+        <Setter Property="Button.Margin" Value="0,0,0,0"/>
+    </Style>
+    <Style x:Key="PopupCloseSuc" BasedOn="{StaticResource PopupLink}">
+        <Setter Property="Button.Background" Value="#51D169"/>
+        <Setter Property="Canvas.Top" Value="545"/>
+        <Setter Property="Canvas.Left" Value="79"/>
+    </Style>
+    <Style x:Key="ProjCartDonation" BasedOn="{StaticResource RedMainMenuButton}">
+        <Setter Property="Button.Margin" Value="-836,656,0,0"/>
+        <Setter Property="Control.Width" Value="823"/>
+    </Style>
+
+    <Style x:Key="CustomRadioBtn">
+        <Setter Property="RadioButton.FontFamily" Value="{StaticResource din-regular}"/>
+        <Setter Property="RadioButton.FontSize" Value="30"/>
+        <Setter Property="RadioButton.Margin" Value="0,0,64,0"/>
+        <Setter Property="RadioButton.Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="RadioButton">
+                    <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                        
+                        
+                        <Border x:Name="OuterCircle"
+                            Width="49"
+                            Height="49"
+                            CornerRadius="24.5"
+                            BorderThickness="1"
+                            BorderBrush="#1E1E1E"
+                            Background="{TemplateBinding Background}"
+                            VerticalAlignment="Center">
+                            
+                            
+                            <Ellipse x:Name="InnerCircle"
+                                 Width="22"
+                                 Height="22"
+                                 Fill="Transparent"
+                                 VerticalAlignment="Center"
+                                 HorizontalAlignment="Center"/>
+                        </Border>
+                        
+                        
+                        <ContentPresenter x:Name="Content"
+                                      Margin="12,0,0,0"
+                                      VerticalAlignment="Center"
+                                      RecognizesAccessKey="True"/>
+                    </StackPanel>
+                    
+                    
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsChecked" Value="True">
+                            <Setter TargetName="InnerCircle" Property="Fill" Value="#E31E24"/>
+                            <Setter TargetName="OuterCircle" Property="BorderBrush" Value="#E31E24"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+     </Style>
+
+    <Style x:Key="KeyBoardNumberBtn">
+        <Setter Property="Button.Width" Value="88"/>
+        <Setter Property="Button.Height" Value="88"/>
+        <Setter Property="Button.FontFamily" Value="{StaticResource open-sans}"/>
+        <Setter Property="Button.FontSize" Value="27"/>
+        <Setter Property="Button.Background" Value="White"/>
+        <Setter Property="Button.BorderThickness" Value="0"/>
+        <Setter Property="Button.Margin" Value="0 0 15 15"/>
+        <Setter Property="Button.Template">
+            <Setter.Value >
+                <ControlTemplate TargetType="Button">
+                    <Border x:Name="border" Background="{TemplateBinding Background}" BorderThickness="{TemplateBinding BorderThickness }" BorderBrush="{TemplateBinding BorderBrush}" CornerRadius="20">
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="KeyBordDeleteBtn" BasedOn="{StaticResource KeyBoardNumberBtn}">
+        <Setter Property="Button.Width" Value="191"/>
+        <Setter Property="Button.Height" Value="83"/>
+    </Style>
+
+    <Style x:Key="CardMethodPopupCancel" BasedOn="{StaticResource PopupCancel}">
+        <Setter Property="Canvas.Top" Value="307.5"/>
+        <Setter Property="Canvas.Left" Value="825"/>
+    </Style>
+
+    <Style x:Key="SwipeButton1">
+        <Setter Property="Button.Width" Value="64"/>
+        <Setter Property="Button.Height" Value="64"/>
+        <Setter Property="Button.Margin" Value="0,0,0,0"/>
+        <Setter Property="Button.Template">
+            <Setter.Value>
+                <ControlTemplate>
+                    <Ellipse x:Name="Elipse" Width="{TemplateBinding Width}" Height="{TemplateBinding Height}">
+                        <Ellipse.Fill>
+                            <ImageBrush ImageSource="/Resources/Images/Rarrow.png" Stretch="Fill"/>
+                        </Ellipse.Fill>
+                    </Ellipse>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsEnabled" Value="True">
+                            <Setter TargetName="Elipse" Property="Fill">
+                                <Setter.Value>
+                                    <ImageBrush ImageSource="/Resources/Images/Rarrow.png" Stretch="Fill"/>
+                                </Setter.Value>
+                            </Setter>
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="False">
+                            <Setter TargetName="Elipse" Property="Fill">
+                                <Setter.Value>
+                                    <ImageBrush ImageSource="/Resources/Images/RarrowInactive.png" Stretch="Fill"/>
+                                </Setter.Value>
+                            </Setter>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style x:Key="SwipeButton2" BasedOn="{StaticResource SwipeButton1}">
+        <Setter Property="Button.Template">
+            <Setter.Value>
+                <ControlTemplate>
+                    <Ellipse x:Name="Elipse" Width="{TemplateBinding Width}" Height="{TemplateBinding Height}">
+                        <Ellipse.Fill>
+                            <ImageBrush ImageSource="/Resources/Images/Larrow.png" Stretch="Fill"/>
+                        </Ellipse.Fill>
+                    </Ellipse>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsEnabled" Value="True">
+                            <Setter TargetName="Elipse" Property="Fill">
+                                <Setter.Value>
+                                    <ImageBrush ImageSource="/Resources/Images/Larrow.png" Stretch="Fill"/>
+                                </Setter.Value>
+                            </Setter>
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="False">
+                            <Setter TargetName="Elipse" Property="Fill">
+                                <Setter.Value>
+                                    <ImageBrush ImageSource="/Resources/Images/LarrowInactive.png" Stretch="Fill"/>
+                                </Setter.Value>
+                            </Setter>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
 </ResourceDictionary>

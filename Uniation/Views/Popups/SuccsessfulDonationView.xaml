@@ -1,0 +1,23 @@
+﻿<UserControl x:Class="Uniation.Views.Popups.SuccsessfulDonationView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Uniation.Views.Popups"
+             xmlns:popup="clr-namespace:Uniation.ViewModels.Popups"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800"
+             d:DataContext="{d:DesignInstance popup:SuccsessfulDonationViewModel}">
+    <Grid>
+        <Canvas Style="{StaticResource SucCont}">
+            <Rectangle Style="{StaticResource Waiting}">
+            <Rectangle.Fill>
+                <ImageBrush ImageSource="/Resources/Images/Success.png" Stretch="Fill"/>
+            </Rectangle.Fill>
+            </Rectangle>
+            <TextBlock Style="{StaticResource SucInfo}" Text="Пожертвование успешно отправлено"/>
+            <TextBlock Style="{StaticResource SecDesc}" Text="Спасибо за ваше участие!"/>
+            <Button Content="Закрыть" Style="{StaticResource PopupCloseSuc}" Command="{Binding CloseCommand}"/>
+        </Canvas>
+    </Grid>
+</UserControl>
