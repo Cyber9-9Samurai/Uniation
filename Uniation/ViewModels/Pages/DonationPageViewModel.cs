@@ -92,7 +92,7 @@ namespace Uniation.ViewModels.Pages
         [RelayCommand]
         private void Donate()
         {
-            if (SelectedIndex !=0 && (isChoose() || (Sum.Length > 0 && int.TryParse(Sum,out int a) && a > 10)))
+            if (SelectedIndex !=0 && (isChoose() || (Sum.Length > 0 && int.TryParse(Sum,out int a) && a >= 10)))
             {
                 DonatedProject proj = new();
                 proj.id = SelectedIndex;
