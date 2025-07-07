@@ -19,18 +19,20 @@ namespace Uniation.ViewModels.Popups
         private string sum;
 
         private readonly ModalNavigationStore _modalNavigationStore;
-        private readonly NavigationService<WaitingPopupViewModal> _waitNav;
+        private readonly ParameterNavigationService<WaitingPopupViewModal, DonatedProject> _waitNav;
+        private readonly DonatedProject _project;
         private System.Threading.Timer _timer;
 
-        public CardMethodPopupViewModel(NavigationHelper navigationHelper,ModalNavigationStore modalNavigationStore, NavigationService<WaitingPopupViewModal> waitNav)
+        public CardMethodPopupViewModel(DonatedProject project,ModalNavigationStore modalNavigationStore, ParameterNavigationService<WaitingPopupViewModal, DonatedProject> waitNav)
         {
             _modalNavigationStore = modalNavigationStore;
             _waitNav = waitNav;
-            if (navigationHelper.Parameter is DonatedProject p)
+            _project = project;
+            if (_project != null)
             {
-                Sum = p.sum + " ₽";
+                Sum = project.sum.ToString() + " ₽";
             }
-            _timer = new System.Threading.Timer(TimerCallback, waitNav, 5000, Timeout.Infinite);
+            _timer = new System.Threading.Timer(TimerCallback, null, 5000, Timeout.Infinite);
         }
 
         [RelayCommand]
@@ -41,9 +43,9 @@ namespace Uniation.ViewModels.Popups
         }
         private void TimerCallback(object? obj)
         {
-            if (obj is NavigationService<WaitingPopupViewModal>)
+            if (_project != null)
             {
-                _waitNav.Navigate();
+                _waitNav.Navigate(_project);
             }
         }
     }

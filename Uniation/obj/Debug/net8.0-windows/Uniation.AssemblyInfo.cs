@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Uniation")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a9aadff3485020d4c07e150c35589c8e775fecca")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3e91640e2ade1e29077a38ebdb5d289e04a97fd7")]
 [assembly: System.Reflection.AssemblyProductAttribute("Uniation")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Uniation")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -23,20 +23,22 @@ namespace Uniation.ViewModels.Popups
 
         private readonly ModalNavigationStore _modalNavigationStore;
         private readonly NavigationService<MainPageViewModel>  _mainNav;
-        private readonly NavigationService<WaitingPopupViewModal> _waitNav;
+        private readonly ParameterNavigationService<WaitingPopupViewModal, DonatedProject> _waitNav;
+        private readonly DonatedProject _project;
         private System.Threading.Timer _timer;
 
 
-        public QRMethodPopupViewModel(NavigationHelper navigationHelper, ModalNavigationStore modalNavigationStore,NavigationService<MainPageViewModel> mainNav,NavigationService<WaitingPopupViewModal> waitNav)
+        public QRMethodPopupViewModel(DonatedProject project, ModalNavigationStore modalNavigationStore,NavigationService<MainPageViewModel> mainNav,ParameterNavigationService<WaitingPopupViewModal,DonatedProject> waitNav)
         {
             _modalNavigationStore = modalNavigationStore;
             _mainNav = mainNav;
             _waitNav = waitNav;
-            if (navigationHelper.Parameter is DonatedProject p)
+            _project = project;
+            if (_project != null)
             {
-                Sum = p.sum + " ₽";
+                Sum = project.sum.ToString() + " ₽";
             }
-            _timer = new System.Threading.Timer(TimerCallback, waitNav, 5000, Timeout.Infinite);
+            _timer = new System.Threading.Timer(TimerCallback, null, 5000, Timeout.Infinite);
            
 
         }
@@ -58,9 +60,9 @@ namespace Uniation.ViewModels.Popups
 
         private void TimerCallback(object? obj)
         {
-            if (obj is NavigationService<WaitingPopupViewModal>)
+            if (_project != null)
             {
-                _waitNav.Navigate();
+                _waitNav.Navigate(_project);
             }
         }
        

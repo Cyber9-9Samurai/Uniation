@@ -11,11 +11,11 @@ namespace Uniation.ViewModels.Popups
     public partial class SuccsessfulDonationViewModel : ObservableObject
     {
         private ModalNavigationStore _modalNavigationStore;
-        private NavigationHelper _navigationHelper;
-        public SuccsessfulDonationViewModel(ModalNavigationStore modalNavigationStore, NavigationHelper navigationHelper)
+        private readonly DonatedProject _project;
+        public SuccsessfulDonationViewModel(DonatedProject project,ModalNavigationStore modalNavigationStore)
         {
             _modalNavigationStore = modalNavigationStore;
-            _navigationHelper = navigationHelper;
+            _project = project;
             CreateLog();
         }
 
@@ -27,7 +27,7 @@ namespace Uniation.ViewModels.Popups
 
         private async void CreateLog()
         {
-            if (_navigationHelper.Parameter is DonatedProject p)
+            if (_project != null)
             {
 
                 string path = @"E:\MVS projects\Uniation\Uniation\donations.json";
@@ -35,14 +35,14 @@ namespace Uniation.ViewModels.Popups
                 {
                     string jsonData = await File.ReadAllTextAsync(path);
                     List<DonatedProject> donates = JsonConvert.DeserializeObject<List<DonatedProject>>(jsonData) ?? new();
-                    var repDonate = donates.FirstOrDefault(d => d.id == p.id);
+                    var repDonate = donates.FirstOrDefault(d => d.id == _project.id);
                     if (repDonate != null)
                     {
-                        repDonate.sum += p.sum;
+                        repDonate.sum += _project.sum;
                     }
                     else
                     {
-                        donates.Add(p);
+                        donates.Add(_project);
                     }
                     string updJson = JsonConvert.SerializeObject(donates, Formatting.Indented);
                     await File.WriteAllTextAsync(path, updJson);
@@ -50,7 +50,7 @@ namespace Uniation.ViewModels.Popups
                 else
                 {
 
-                    string jsonstr = JsonConvert.SerializeObject(new List<DonatedProject>() { p }, Formatting.Indented);
+                    string jsonstr = JsonConvert.SerializeObject(new List<DonatedProject>() { _project }, Formatting.Indented);
                     File.Create(path).Close();
                     await File.WriteAllTextAsync(path, jsonstr);
                 }

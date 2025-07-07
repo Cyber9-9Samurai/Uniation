@@ -2,15 +2,7 @@
 using CommunityToolkit.Mvvm.Input;
 using MvvmNavigationLib.Services;
 using MvvmNavigationLib.Stores;
-using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Uniation.Helpers;
 using Uniation.Models;
-using Uniation.ViewModels.Pages;
 
 namespace Uniation.ViewModels.Popups
 {
@@ -19,22 +11,29 @@ namespace Uniation.ViewModels.Popups
         [ObservableProperty]
         private string sum;
 
-        private readonly NavigationService<DonationPageViewModel> _donationNav;
-        private readonly ModalNavigationStore _modalNavigationStore;
-        private readonly NavigationService<CardMethodPopupViewModel> _cardMethodPopup;
-        private readonly NavigationService<QRMethodPopupViewModel> _qrMethodPopup;
 
-        public PaymentsMethodsViewModel(NavigationHelper navigationHelper,NavigationService<DonationPageViewModel> donationNav,ModalNavigationStore modalNavigationStore,NavigationService<CardMethodPopupViewModel> cardMethodPopup,NavigationService<QRMethodPopupViewModel> qrMethodPopup)
+        private readonly ModalNavigationStore _modalNavigationStore;
+        private readonly ParameterNavigationService<CardMethodPopupViewModel, DonatedProject> _cardMethodPopup;
+        private readonly ParameterNavigationService<QRMethodPopupViewModel, DonatedProject> _qrMethodPopup;
+        private readonly DonatedProject _project;
+
+        public PaymentsMethodsViewModel(DonatedProject project, ModalNavigationStore modalNavigationStore, ParameterNavigationService<CardMethodPopupViewModel, DonatedProject> cardMethodPopup, ParameterNavigationService<QRMethodPopupViewModel, DonatedProject> qrMethodPopup)
         {
-            _donationNav = donationNav;
+
             _modalNavigationStore = modalNavigationStore;
             _cardMethodPopup = cardMethodPopup;
             _qrMethodPopup = qrMethodPopup;
-            if(navigationHelper.Parameter is DonatedProject p)
+            _project = project;
+            SetData();
+
+        }
+
+        private void SetData()
+        {
+            if (_project != null)
             {
-                Sum = p.sum.ToString() + " ₽";
+                Sum = _project.sum.ToString() + " ₽";
             }
-            Debug.WriteLine(Sum);
         }
 
         [RelayCommand]
@@ -44,12 +43,12 @@ namespace Uniation.ViewModels.Popups
             {
                 case "card":
                     {
-                        _cardMethodPopup.Navigate();
+                        _cardMethodPopup.Navigate(_project);
                     }
                     break;
                 case "QR":
                     {
-                        _qrMethodPopup.Navigate();
+                        _qrMethodPopup.Navigate(_project);
                     }
                     break;
             }
@@ -59,7 +58,7 @@ namespace Uniation.ViewModels.Popups
         private void Cancel()
         {
             _modalNavigationStore.CurrentViewModel = null;
-           
+
         }
     }
 }

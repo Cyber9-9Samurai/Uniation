@@ -1,6 +1,7 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using MvvmNavigationLib.Services;
+using System.Collections.ObjectModel;
 using System.Windows;
 using Uniation.Helpers;
 using Uniation.Models;
@@ -14,38 +15,38 @@ namespace Uniation.ViewModels.Pages
         private List<ProjectsData> projects = new();
 
         [ObservableProperty]
-        private int selectedIndex = 0;
+        public ObservableCollection<RadioButtons> radios = new ObservableCollection<RadioButtons>
+        {
+            new RadioButtons {Content = "100₽",ComParameter = "100 ₽",IsChecked = false},
+            new RadioButtons {Content = "500₽",ComParameter = "500 ₽",IsChecked = false},
+            new RadioButtons {Content = "1000₽",ComParameter = "1000 ₽",IsChecked = false},
+            new RadioButtons {Content = "5000₽",ComParameter = "5000 ₽",IsChecked = false}
+        };
+
+
 
         [ObservableProperty]
-        private bool isOneHundredChecked;
-        [ObservableProperty]
-        private bool isFiveHundredChecked;
-        [ObservableProperty]
-        private bool isOneThousendChecked;
-        [ObservableProperty]
-        private bool isFiveThousandsChecked;
+        private int _selectedIndex = 0;
+
 
         [ObservableProperty]
         private string sum;
 
         [ObservableProperty]
-        private Visibility placeholderVis;
+        private bool placeholderVis;
 
         private readonly NavigationService<MainPageViewModel> _mainNav;
-        private readonly NavigationService<PaymentsMethodsViewModel> _popup;
-        private readonly NavigationHelper _navigationHelper;
         private readonly ApiService _apiService;
-
+        private readonly ParameterNavigationService<PaymentsMethodsViewModel, DonatedProject> _PaymentNavigation;
 
         private string choosenRadioBtn;
 
        
-        public DonationPageViewModel(NavigationService<MainPageViewModel> mainNav,ApiService apiService,NavigationService<PaymentsMethodsViewModel> popup,NavigationHelper navigationHelper)
+        public DonationPageViewModel(NavigationService<MainPageViewModel> mainNav,ApiService apiService,ParameterNavigationService<PaymentsMethodsViewModel,DonatedProject> parameterNavigation)
         {
             _mainNav = mainNav;
-            _popup = popup;
             _apiService = apiService;
-            _navigationHelper = navigationHelper;
+            _PaymentNavigation = parameterNavigation;
             SetDefaultSettings();
         }
 
@@ -82,9 +83,9 @@ namespace Uniation.ViewModels.Pages
         [RelayCommand]
         private void Cancel()
         {
-            PlaceholderVis = Visibility.Visible;
+            PlaceholderVis = true;
             SelectedIndex = 0;
-            IsOneHundredChecked = true;
+            Radios[0].IsChecked = true;
             Sum = "";
             choosenRadioBtn = "100 ₽";
         }
@@ -105,36 +106,37 @@ namespace Uniation.ViewModels.Pages
                 {
                     proj.sum = int.Parse(Sum);
                 }
-                _navigationHelper.Parameter = proj;
-                _popup.Navigate();
+                
+                _PaymentNavigation.Navigate(proj);
+               
             }
         }
 
         private bool isChoose()
         {
-            
-            return IsOneHundredChecked || IsFiveHundredChecked || IsOneThousendChecked || IsFiveThousandsChecked;
+
+            return Radios[0].IsChecked || Radios[1].IsChecked || Radios[2].IsChecked || Radios[3].IsChecked;
         }
 
         private void Input()
         {
             CustomChoice();
-            PlaceholderVis = Visibility.Hidden;
+            PlaceholderVis = false;
         }
         private void SetDefault()
         {
             if (Sum.Length == 0 && !isChoose())
             {
-                IsOneHundredChecked = true;
-                PlaceholderVis = Visibility.Visible;
+                Radios[0].IsChecked = true;
+                PlaceholderVis = true;
             }
         }
         private void CustomChoice()
         {
-            IsOneHundredChecked = false;
-            IsFiveHundredChecked = false;
-            IsOneThousendChecked = false;
-            IsFiveThousandsChecked = false;
+            Radios[0].IsChecked = false;
+            Radios[1].IsChecked = false;
+            Radios[2].IsChecked = false;
+            Radios[3].IsChecked = false;
         }
 
         [RelayCommand]
@@ -142,7 +144,7 @@ namespace Uniation.ViewModels.Pages
         {
             
             Sum = "";
-            PlaceholderVis = Visibility.Visible;
+            PlaceholderVis = true;
             choosenRadioBtn = cont;
         }
 
@@ -155,62 +157,13 @@ namespace Uniation.ViewModels.Pages
                 
                 switch (number)
                 {
-                    case 1:
+                    case >=1 and <=9:
                         {
-                            Sum += "1";
+                            Sum += number.ToString();
                             Input();
                         }
                         break;
-                    case 2:
-                        {
-                            Sum += "2";
-                            Input();
-                        }
-                        break;
-
-                    case 3:
-                        {
-                            Sum += "3";
-                            Input();
-                        }
-                        break;
-
-                    case 4:
-                        {
-                            Sum += "4";
-                            Input();
-                        }
-                        break;
-                    case 5:
-                        {
-                            Sum += "5";
-                            Input();
-                        }
-                        break;
-                    case 6:
-                        {
-                            Sum += "6";
-                            Input();
-                        }
-                        break;
-                    case 7:
-                        {
-                            Sum += "7";
-                            Input();
-                        }
-                        break;
-                    case 8:
-                        {
-                            Sum += "8";
-                            Input();
-                        }
-                        break;
-                    case 9:
-                        {
-                            Sum += "9";
-                            Input();
-                        }
-                        break;
+                    
                     case 0:
                         {
                             if (Sum.Length > 0)

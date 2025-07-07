@@ -7,6 +7,7 @@ using MvvmNavigationLib.Services.ServiceCollectionExtensions;
 using MvvmNavigationLib.Stores;
 using Uniation.Helpers;
 using Uniation.ViewModels.Pages;
+using Uniation.Models;
 
 namespace Uniation.HostBuilders
 {
@@ -22,11 +23,11 @@ namespace Uniation.HostBuilders
                 services.AddNavigationService<PasswordPopupViewModel, ModalNavigationStore>(s => new PasswordPopupViewModel(
                     s.GetRequiredService<CloseNavigationService<ModalNavigationStore>>(),
                     context.Configuration.GetValue<string>("exitPassword") ?? "1234"));
-                services.AddNavigationService<PaymentsMethodsViewModel, ModalNavigationStore>();
-                services.AddNavigationService<CardMethodPopupViewModel, ModalNavigationStore>();
-                services.AddNavigationService<QRMethodPopupViewModel, ModalNavigationStore>();
-                services.AddNavigationService<WaitingPopupViewModal, ModalNavigationStore>();
-                services.AddNavigationService<SuccsessfulDonationViewModel, ModalNavigationStore>();
+                services.AddParameterNavigationService<PaymentsMethodsViewModel, ModalNavigationStore, DonatedProject>(provider => param => ActivatorUtilities.CreateInstance<PaymentsMethodsViewModel>(provider,param));
+                services.AddParameterNavigationService<CardMethodPopupViewModel, ModalNavigationStore,DonatedProject>(provider => param => ActivatorUtilities.CreateInstance<CardMethodPopupViewModel>(provider,param));
+                services.AddParameterNavigationService<QRMethodPopupViewModel, ModalNavigationStore,DonatedProject>(provider => param => ActivatorUtilities.CreateInstance<QRMethodPopupViewModel>(provider,param));
+                services.AddParameterNavigationService<WaitingPopupViewModal, ModalNavigationStore,DonatedProject>(provider => param => ActivatorUtilities.CreateInstance<WaitingPopupViewModal>(provider,param));
+                services.AddParameterNavigationService<SuccsessfulDonationViewModel, ModalNavigationStore,DonatedProject>(provider => param => ActivatorUtilities.CreateInstance<SuccsessfulDonationViewModel>(provider,param));
             });
                 
 

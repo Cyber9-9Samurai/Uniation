@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Media.Imaging;
 using Uniation.Helpers;
@@ -52,24 +53,10 @@ namespace Uniation.ViewModels.Pages
             {
                 id = project.id,
                 title = project.title,
-                description = project.description,
-                image = project.image
+                description = Regex.Replace(project.description.Replace("<br><br>", "\n").Replace("<br>", "\n").Replace("&nbsp;", ""),"<.*?>",""),
+                image = "http://api-sdr.itlabs.top" + project.image
             };
-            Project.description = Project.description.Replace("<div>","");
-            Project.description = Project.description.Replace("</div>", "");
-            Project.description = Project.description.Replace("<br><br>", "\n");
-            Project.description = Project.description.Replace("<br>", "\n");
-            Project.description = Project.description.Replace("&nbsp;", "");
-            Project.description = Project.description.Replace("<strong>", "");
-            Project.description = Project.description.Replace("</strong>", "");
-            Project.description = Project.description.Replace("<blockquote>", "");
-            Project.description = Project.description.Replace("</blockquote>", "");
-            Project.description = Project.description.Replace("<em>", "");
-            Project.description = Project.description.Replace("</em>", "");
-            Image = "http://api-sdr.itlabs.top" + Project.image;
-            Debug.WriteLine(Project.title);
-            Debug.WriteLine(Project.image);
-            Debug.WriteLine(Project.description);
+            
         }
 
         [RelayCommand]

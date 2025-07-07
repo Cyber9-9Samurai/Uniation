@@ -59,7 +59,7 @@ namespace Uniation.Views.Windows {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/Uniation;V1.0.0.0;component/views/windows/mainwindow.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/Uniation;component/views/windows/mainwindow.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\..\Views\Windows\MainWindow.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

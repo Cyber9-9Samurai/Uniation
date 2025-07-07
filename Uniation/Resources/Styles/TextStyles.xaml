@@ -91,7 +91,7 @@
     </Style>
 
     <Style x:Key="ProjInfoDesc" BasedOn="{StaticResource GreatingText}">
-        <Setter Property="TextBlock.Height" Value="1600"/>
+        <Setter Property="TextBlock.Height" Value="auto"/>
         <Setter Property="TextBlock.Width" Value="773"/>
         <Setter Property="TextBlock.TextAlignment" Value="Left"/>
         <Setter Property="TextBlock.Margin" Value="0,0,0,0"/>
